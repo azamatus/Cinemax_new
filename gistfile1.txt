@@ -1,0 +1,4 @@
+$ gem install watchr
+$ cd /path/to/symfony-project
+$ wget https://raw.github.com/gist/1151531/f12b125fed843086c05377d4f76185797121cbc6/phpunit.watchr
+$ watchr phpunit.watchr
