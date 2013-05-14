@@ -40,9 +40,6 @@ class AppKernel extends Kernel
             new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
             new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
 
-            // PAGE
-            new Sonata\PageBundle\SonataPageBundle(),
-            new Application\Sonata\PageBundle\ApplicationSonataPageBundle(),
 
             // NEWS
             new Sonata\MarkItUpBundle\SonataMarkItUpBundle(),
@@ -75,6 +72,7 @@ class AppKernel extends Kernel
 
             // Enable this if you want to audit backend action
             new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),
+            new Cinemax\Header\HeaderBundle\CinemaxHeaderBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
