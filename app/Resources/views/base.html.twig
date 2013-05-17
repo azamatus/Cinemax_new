@@ -6,6 +6,12 @@
     {% block stylesheets %}
         <link href="{{ asset('public/css/mainframe.css') }} " type="text/css" rel="stylesheet"/>
     {% endblock %}
+    {% block javascripts %}
+        <script type="text/javascript" src="{{ asset("public/js/jquery-1.9.1.min.js") }}"></script>
+        <script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+        <script type="text/javascript" src="{{ asset("public/js/time.js") }}"></script>
+        <script type="text/javascript" src="{{ asset("public/js/animation.js") }}"></script>
+    {% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
 </head>
 <body>
@@ -158,19 +164,23 @@
     </div>
     <div id="mid_picture">
         <span>СКОРО В КИНО!!!</span><br>
-        <div>
-        </div>
+        {% render "CinemaxHeaderSliderBundle:Slider:getSlider" %}
     </div>
-</header>
+
+
+    asdad<br>asdad<br>asdad<br>asdad<br>asdad<br>asdad<br>asdad<br>asdad<br>asdad<br>
+    asdad<br>asdad<br>asdad<br>asdad<br>asdad<br>asdad<br>
+    asdad<br>asdad<br>asdad<br>asdad<br>asdad<br>asdad<br>
+    asdad<br>asdad<br>asdad<br>
+    asdad<br>asdad<br>asdad<br>
+    asdad<br>asdad<br>asdad<br>
+
+
+ </header>
 {% block body %}
 {% endblock %}
 
 </body>
-{% block javascripts %}
-    <script type="text/javascript" src="{{ asset("public/js/jquery-1.9.1.min.js") }}"></script>
-    <script type="text/javascript" src="{{ asset("public/js/time.js") }}"></script>
-    <script type="text/javascript" src="{{ asset("public/js/animation.js") }}"></script>
-    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-{% endblock %}
+
 
 </html>

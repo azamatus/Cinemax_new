@@ -1,3 +1,7 @@
+cinemax_header_slider:
+    resource: "@CinemaxHeaderSliderBundle/Resources/config/routing.yml"
+    prefix:   /
+
 cinemax_header:
     resource: "@CinemaxHeaderBundle/Resources/config/routing.yml"
     prefix:   /

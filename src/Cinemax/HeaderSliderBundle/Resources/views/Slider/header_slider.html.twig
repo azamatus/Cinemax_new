@@ -1,0 +1,17 @@
+<link href="{{ asset("bundles/cinemaxheaderslider/css/nivo-slider.css") }}" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="{{ asset("bundles/cinemaxheaderslider/js/header_slider.js") }}"></script>
+<script type="text/javascript">
+    $(window).load(function () {
+        $('#slider').nivoSlider();
+    });
+</script>
+<div id="wrapper">
+    <div class="slider-wrapper">
+        <div id="slider" class="nivoSlider">
+            {% for slider in sliders %}
+                {{ slider.content|raw }}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+

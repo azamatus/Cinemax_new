@@ -354,19 +354,23 @@ ul
 /* middle header slider*/
 #mid_picture
 {
-    margin-top: 195px;
-    display: inline-block;
-    margin-left: 120px;
-    text-align: center;
+   text-align: center;
+   position: relative;
+   margin-top: 200px;
 }
 #mid_picture span
-{
-    display: inline-block;
-}
+ {
+     display: inline-block;
+ }
 #mid_picture span:nth-child(1)
 {
     color:  #ff0f0f;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
+    margin-right: 220px;
 }
+/*#mid_picture span:nth-child(3)*/
+/*{*/
+    /*color: #fefdcb;*/
+/*}*/
 /*end of middle header slider*/
