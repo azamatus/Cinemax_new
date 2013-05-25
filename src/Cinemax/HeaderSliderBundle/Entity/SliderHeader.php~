@@ -1,0 +1,39 @@
+<?php
+
+namespace Cinemax\HeaderSliderBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * SliderHeader
+ *
+ * @ORM\Table(name="slider_header")
+ * @ORM\Entity
+ */
+class SliderHeader
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title", type="string", length=120, nullable=false)
+     */
+    private $title;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="content", type="text", nullable=false)
+     */
+    private $content;
+
+
+}
