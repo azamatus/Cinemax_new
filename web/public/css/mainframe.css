@@ -266,6 +266,8 @@ ul
     margin-top: 200px;
     margin-left: -50px;
     float: left;
+    z-index: 2;
+    position: relative;
 
 }
 #left_header_menu .item_menu
@@ -357,6 +359,7 @@ ul
    text-align: center;
    position: relative;
    margin-top: 200px;
+   z-index: 1;
 }
 #mid_picture span
  {
@@ -367,10 +370,6 @@ ul
     color:  #ff0f0f;
     font-weight: bold;
     margin-bottom: 40px;
-    margin-right: 220px;
+    margin-right: 25%;
 }
-/*#mid_picture span:nth-child(3)*/
-/*{*/
-    /*color: #fefdcb;*/
-/*}*/
 /*end of middle header slider*/

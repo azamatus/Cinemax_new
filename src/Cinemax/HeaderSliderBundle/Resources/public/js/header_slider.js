@@ -560,7 +560,7 @@
                     var prevCol = cols;
                     for(var rows = 0; rows < settings.boxRows; rows++){
                         if(prevCol >= 0 && prevCol < settings.boxCols){
-                            /* Due to some weird JS bug with loop vars 
+                            /* Due to some weird JS bug with loop vars
                              being used in setTimeout, this is wrapped
                              with an anonymous function call */
                             (function(row, col, time, i, totalBoxes) {
