@@ -55,20 +55,21 @@ security:
 
     access_control:
         # URL of FOSUserBundle which need to be available to anonymous users
-        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+               - { path: ^/_wdt, role: IS_AUTHENTICATED_ANONYMOUSLY }
+               - { path: ^/_profiler, role: IS_AUTHENTICATED_ANONYMOUSLY }
+               - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
 
-        # Admin login page needs to be access without credential
-        - { path: ^/admin/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/admin/logout$, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/admin/login-check$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+               # -> custom access control for the admin area of the URL
+               - { path: ^/admin/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+               - { path: ^/admin/logout$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+               - { path: ^/admin/login-check$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+               # -> end
 
-        # Secured part of the site
-        # This config requires being logged for the whole site and having the admin role for the admin part.
-        # Change these rules to adapt them to your needs
-        - { path: ^/admin/, role: [ROLE_ADMIN, ROLE_SONATA_ADMIN] }
-        - { path: ^/.*, role: IS_AUTHENTICATED_ANONYMOUSLY }
+               - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+               - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
 
-#    acl:
-#        connection: default
+               # Secured part of the site
+               # This config requires being logged for the whole site and having the admin role for the admin part.
+               # Change these rules to adapt them to your needs
+               - { path: ^/admin, role: [ROLE_ADMIN, ROLE_SONATA_ADMIN] }
+               - { path: ^/.*, role: IS_AUTHENTICATED_ANONYMOUSLY }

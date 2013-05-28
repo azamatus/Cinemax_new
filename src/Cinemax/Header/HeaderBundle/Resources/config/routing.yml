@@ -1,3 +1,0 @@
-cinemax_homepage:
-    pattern:  /
-    defaults: { _controller: CinemaxHeaderBundle:Main:index }
