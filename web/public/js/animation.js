@@ -10,5 +10,25 @@ $(document).ready(function(){
     $(document).on('click','#menu_bounce',function(){
        $(this).effect('bounce',{times:3},'slow');
     });
-    $
-});
+    $('#login').bind('focus blur', function(event){
+            if(event.type == 'focus'){
+                 if(this.value == 'Введите свой логин')
+                 { this.value = ''; }
+            }
+            if(event.type == 'blur'){
+                if(this.value == '')
+                { this.value = 'Введите свой логин'; }
+            }
+      }
+    );
+    $('#password').bind('focus blur', function(event){
+        if(event.type == 'focus'){
+            if(this.value == 'password')
+            { this.value = '';}
+        }
+        if(event.type == 'blur'){
+            if(this.value == '')
+            { this.value = 'password';}
+        }
+    });
+ });

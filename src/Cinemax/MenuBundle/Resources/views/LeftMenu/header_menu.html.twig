@@ -1,0 +1,90 @@
+{% extends '::base.html.twig' %}
+{% block stylesheets  %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/cinemaxmenu/css/header_left_menu.css') }}" type="text/css" rel="stylesheet"/>
+{% endblock %}
+{% block menu %}
+    <div id="left_header_menu">
+        <ul>
+            <li class="item_menu">
+                <a href="#">
+                    <div class="menu_border"></div>
+                    <div class="menu_image_hover"></div>
+                    <div class="item_menu_line"></div>
+                    <span>НОВИНКИ</span>
+                </a>
+            </li>
+            <li class="item_menu item_margin_cat">
+                <a href="#">
+                    <div class="menu_border"></div>
+                    <div class="menu_image_hover"></div>
+                    <div class="item_menu_line"></div>
+                    <span>КАТАЛОГ</span>
+                </a>
+            </li>
+            <li class="item_menu item_margin_tr">
+                <a href="#">
+                    <div class="menu_border"></div>
+                    <div class="menu_image_hover"></div>
+                    <div class="item_menu_line"></div>
+                    <span>ТРЕЙЛЕРЫ</span>
+                </a>
+            </li>
+            <li class="item_menu item_margin_st_ct">
+                <a href="#">
+                    <div class="menu_border"></div>
+                    <div class="menu_image_hover"></div>
+                    <div class="item_menu_line"></div>
+                    <span>СОТРУДНИКИ</span>
+                </a>
+            </li>
+            <li class="item_menu item_margin_st_ct">
+                <a href="#">
+                    <div class="menu_border"></div>
+                    <div class="menu_image_hover"></div>
+                    <div class="item_menu_line"></div>
+                    <span>КОНТАКТЫ</span>
+                </a>
+            </li>
+            <li class="item_menu item_margin_vd">
+                <a href="#">
+                    <div class="menu_border"></div>
+                    <div class="menu_image_hover"></div>
+                    <div class="item_menu_line item_menu_vd_line"></div>
+                    <span>ВИДЕО</span>
+                </a>
+            </li>
+            <li class="item_menu item_margin_ms">
+                <a href="#">
+                    <div class="menu_border"></div>
+                    <div class="menu_image_hover"></div>
+                    <div class="item_menu_line"></div>
+                    <span>МУЗЫКА</span>
+                </a>
+            </li>
+            <li class="item_menu item_margin_fg">
+                <a href="#">
+                    <div class="menu_border"></div>
+                    <div class="menu_image_hover"></div>
+                    <div class="item_menu_line"></div>
+                    <span>ФОТОГАЛЕРЕЯ</span>
+                </a>
+            </li>
+            <li class="item_menu item_margin_of">
+                <a href="#">
+                    <div class="menu_border"></div>
+                    <div class="menu_image_hover"></div>
+                    <div class="item_menu_line"></div>
+                    <span>ОНЛАЙН ФИЛЬМЫ</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="mid_picture">
+        <span>СКОРО В КИНО!!!</span><br>
+            {% render "CinemaxHeaderSliderBundle:Slider:getSlider" %}
+    </div>
+
+
+
+{% endblock %}

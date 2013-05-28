@@ -259,117 +259,55 @@ ul
     color: #feb957;
 }
 /* end of definition*/
-/*left_header_menu*/
-#left_header_menu ul
+/* right side registration*/
+#right_side
 {
-    display: inline-block;
-    margin-top: 200px;
-    margin-left: -50px;
-    float: left;
-    z-index: 2;
-    position: relative;
-
+    float: right;
+    margin-right: 60px;
 }
-#left_header_menu .item_menu
+.login_password
 {
-    margin-bottom: 18px;
-}
-#left_header_menu  span
-{
-    color: #ffffff;
-    display: block;
-    position: absolute;
-    margin: -28px 20px;
-    font-size: 19px;
-}
-#left_header_menu .menu_border
-{
-    border: 1px #f9b655 solid;
-    width: 262px;
+    background-color: black;
+    border: 1px solid;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    width: 260px;
     height: 30px;
-    border-radius: 5px;
-    background-color: #1f180e;
-    -moz-border-radius: 5px; /* Firefox */
-    -webkit-border-radius: 5px; /* Safari, Chrome */
-    -khtml-border-radius: 5px; /* KHTML */
+    padding-left: 10px;
     opacity: 0.5;
-    -moz-opacity: 0.5; /* Mozilla 1.6 и ниже */
-    -khtml-opacity: 0.5; /* Konqueror 3.1, Safari 1.1 */
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    filter: alpha(opacity=50);
 }
-#left_header_menu .menu_image_hover
+#right_side span
 {
-    background: url("../images/left_header_menu_hover.png") no-repeat;
-    width: 280px;
-    position: absolute;
-    margin: -41px -8px;
-    height: 50px;
-    visibility: hidden;
+    display: block;
+    float: left;
 }
-#left_header_menu li:hover div.menu_image_hover
+.reg_strelka1
 {
-   visibility: visible;
+    background: url('../images/reg_strlelka.png') no-repeat;
+    width: 30px;
+    height: 20px;
+    margin-left: 20%;
+    background-position: 0px 4px;
 }
-.item_margin_cat
+.reg_strelka2
 {
-    position: relative;
-    left: -10px;
+    background: url('../images/reg_strlelka.png') no-repeat;
+    width: 30px;
+    height: 20px;
+    margin-left: 23%;
+    background-position: 0px 4px;
 }
-.item_margin_tr
+/*end of right side*/
+
+
+.float_right
 {
-    position: relative;
-    left: -20px;
+    float: right;
 }
-.item_margin_st_ct
-{
-    position: relative;
-    left: -25px;
-}
-.item_margin_vd
-{
-    position: relative;
-    left: -20px;
-}
-.item_margin_ms
-{
-    position: relative;
-    left: -10px;
-}
-.item_margin_fg
-{
-    position: relative;
-    left: 0px;
-}
-.item_margin_of
-{
-    position: relative;
-    left: 15px;
-}
-.item_menu_line
-{
-    background: url("../images/item_menu_line.png") no-repeat;
-    position: absolute;
-    width: 250px;
-    height: 30px;
-    margin: -18px -25px;
-}
-/*end of left_header_menu*/
-/* middle header slider*/
-#mid_picture
-{
-   text-align: center;
-   position: relative;
-   margin-top: 200px;
-   z-index: 1;
-}
-#mid_picture span
- {
-     display: inline-block;
- }
-#mid_picture span:nth-child(1)
-{
-    color:  #ff0f0f;
-    font-weight: bold;
-    margin-bottom: 40px;
-    margin-right: 25%;
-}
-/*end of middle header slider*/
