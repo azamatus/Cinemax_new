@@ -3,7 +3,7 @@ cinemax_header_slider:
     prefix:   /
 
 cinemax_header:
-    resource: "@CinemaxHeaderBundle/Resources/config/routing.yml"
+    resource: "@CinemaxMenuBundle/Resources/config/routing.yml"
     prefix:   /
 
 # Internal routing configuration to handle ESI

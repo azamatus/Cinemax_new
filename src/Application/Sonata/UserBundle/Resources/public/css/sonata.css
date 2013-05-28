@@ -1,0 +1,70 @@
+.registration_input input
+{
+    background-color: black;
+    border: 1px solid;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    width: 260px;
+    height: 30px;
+    padding-left: 10px;
+    margin-right: 40px;
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.fos_user_registration_register
+{
+    float: right;
+    margin-top: -30px;
+    position: relative;
+    z-index: 2;
+}
+.fos_user_registration_register  p
+{
+    font-size: 26px;
+    margin-left: 50px;
+    display: block;
+    margin-bottom: 10px;
+}
+.fos_user_registration_register  span
+{
+    color: red;
+}
+.button_register
+{
+    background-color: black;
+    border-radius: 4px;
+    border: 1px solid #ffc974;
+    width: 130px;
+    opacity: 0.5;
+    height: 25px;
+    float: right;
+    margin-right: 40px;
+    margin-top: 5px;
+}
+.button_register:hover
+{
+    opacity: 1;
+    cursor: pointer;
+}
+.check_email
+{
+    float: right;
+    width: 360px
+}
+.user_registration
+{
+    position: relative;
+    right: -42%;
+}
+.user_login
+{
+    float: right;
+    margin-right: 60px;
+    margin-top: -10px
+}
