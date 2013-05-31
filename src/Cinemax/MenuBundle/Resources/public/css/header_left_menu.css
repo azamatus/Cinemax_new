@@ -1,8 +1,7 @@
 /*left_header_menu*/
 #left_header_menu ul
 {
-    display: inline-block;
-    margin-left: -4%;
+    margin: -4% 12%;
     float: left;
     z-index: 2;
     position: relative;
@@ -97,7 +96,6 @@
 {
     text-align: center;
     position: relative;
-    margin-top: 200px;
     z-index: 1;
 }
 #mid_picture span
@@ -108,7 +106,9 @@
 {
     color:  #ff0f0f;
     font-weight: bold;
-    margin-left: 115px;
     float: left;
+    position: relative;
+    margin: -4% -2%;
+    display: block;
 }
 /*end of middle header slider*/

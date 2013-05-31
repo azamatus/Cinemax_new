@@ -22,21 +22,26 @@
     <div class="line"></div>
     <div class="line2"></div>
     <div class="year"><img src="{{ asset('public/images/2013.png') }}" alt="2013"/></div>
-    <div>
+    <div class="float_left">
         <div class="header_logo"><a href="{{ path("cinemax_homepage") }}"><img
                         src="{{ asset('public/images/logo.png') }}" alt="logo"/></a></div>
         <div class="logo_shadow"></div>
-        <span class="header_title">ПЕРВЫЙ ОФФИЦИАЛЬНЫЙ САЙТ<br>ПРОИЗВОДСТВА КОМПАКТ-ДИСКОВ</span>
+        <span class="header_title clearbox">ПЕРВЫЙ ОФФИЦИАЛЬНЫЙ САЙТ<br>ПРОИЗВОДСТВА КОМПАКТ-ДИСКОВ</span>
     </div>
     <div class="header_picture"></div>
-    <div class="pipe"></div>
+    <div class="pipe clearbox"></div>
     <div>
         <div id="projectors"></div>
         <div class="projectors_light"></div>
     </div>
     <div class="left_bg"></div>
-
-    <div id="main-header-menu">
+    <div class="date_position">
+        СЕГОДНЯ<br/>
+        <span id="today"></span><br/>
+        <span id="date"></span><br/>
+        <span id="hour_min_sec"></span>
+    </div>
+    <div id="main-header-menu" class="clearbox">
         <ul>
             <li id="menu_bounce" class="item_margins">
                 <a href="#">
@@ -75,13 +80,8 @@
             </li>
         </ul>
     </div>
-    <div class="date_position">
-        СЕГОДНЯ<br/>
-        <span id="today"></span><br/>
-        <span id="date"></span><br/>
-        <span id="hour_min_sec"></span>
-    </div>
-    <div>
+
+    <div class="header_definition clearbox">
         <div class="definition_bg"></div>
         <div class="definition">Компания <span>«Cinemax»</span> - производство, нанесение изображения на компакт диски,
             репликация, тиражирование компакт дисков.

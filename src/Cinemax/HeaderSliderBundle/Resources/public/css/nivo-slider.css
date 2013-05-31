@@ -1,33 +1,17 @@
-/*
- * jQuery Nivo Slider v3.2
- * http://nivo.dev7studios.com
- *
- * Copyright 2012, Dev7studios
- * Free to use and abuse under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- */
-
-/* The Nivo Slider styles */
 .nivoSlider {
-    position:absolute;
-    width:23%;
-    height:auto;
-    margin-left: 43%;
-    margin-top: 18px;
+    border: 3px solid;
+    border-radius: 8px 8px 8px 8px;
+    float: left;
+    height: auto;
+    margin-left: -8%;
+    margin-top: -30px;
     overflow: hidden;
-    border:3px solid ;
-    border-radius: 8px;
-    -webkit-border-radius:8px;
-    -moz-border-radius:8px;
-    -o-border-radius:8px;
-
+    position: relative;
+    width: 23%;
 }
 .nivoSlider img {
-    position:absolute;
-    border-radius: 5px;
-    -webkit-border-radius:5px;
-    -moz-border-radius:5px;
-    -o-border-radius:5px;
+    border-radius: 5px 5px 5px 5px;
+    position: absolute;
 }
 .nivo-main-image {
     display: block !important;
@@ -35,41 +19,35 @@
     width: 100% !important;
 }
 .nivo-slice {
-    display:block;
-    position:absolute;
-    z-index:5;
-    height:100%;
-    top:0;
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 5;
 }
 .nivo-box {
-    display:block;
-    position:absolute;
-    z-index:5;
-    overflow:hidden;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    z-index: 5;
 }
-.nivo-box img { display:block; }
-
+.nivo-box img {
+    display: block;
+}
 .nivo-caption {
-    position:absolute;
-    left:0px;
-    bottom:0px;
-    background:#000;
-    color:#fff;
-    width:100%;
-    z-index:8;
-    padding: 5px 10px;
+    -moz-box-sizing: border-box;
+    background: none repeat scroll 0 0 #000000;
+    bottom: 0;
+    color: #FFFFFF;
+    display: none;
+    left: 0;
     opacity: 0.8;
     overflow: hidden;
-    display: none;
-    -moz-opacity: 0.8;
-    filter:alpha(opacity=8);
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-    box-sizing: border-box;         /* Opera/IE 8+ */
+    padding: 5px 10px;
+    position: absolute;
+    width: 100%;
+    z-index: 8;
 }
 .nivo-html-caption {
-    display:none;
+    display: none;
 }
-
-
-
