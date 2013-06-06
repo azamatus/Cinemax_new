@@ -10,7 +10,7 @@
     </div>
 
     <div>
-        <div class="registration_label">{{ form_label(form.email, 'E-mail') }}</div>
+        <div class="registration_label">{{ form_label(form.email, 'E-mail:') }}</div>
         {{ form_errors(form.email) }}
         <div class="registration_input">{{ form_widget(form.email) }}</div>
 
@@ -58,6 +58,6 @@
 
     {{ form_rest(form) }}
     <div class="registration_submit">
-        <input type="submit" value="{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}" class="button_register" />
+        <button type="submit" class="button_register" >{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}</button>
     </div>
 </form>

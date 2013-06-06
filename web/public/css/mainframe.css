@@ -1,4 +1,3 @@
-
 * {
     color: #FFC974;
     font-family: Calibri;
@@ -13,7 +12,7 @@ body {
     width: 1110px;
 }
 a, a:hover, a:link, a:visited img {
-    border: medium none;
+    border: 0;
     text-decoration: none;
 }
 .clearbox
@@ -35,14 +34,14 @@ img, div {
     z-index: 3;
 }
 .logo_shadow {
-    background: url("../images/logo_shadow.png") no-repeat scroll 0 0 transparent;
+    background: url("../images/logo_shadow.png") no-repeat;
     height: 253px;
     margin: -25px 45px;
     position: absolute;
     width: 725px;
 }
 .header_picture {
-    background: url("../images/bullets.png") no-repeat scroll 0 0%, url("../images/header_picture1.png") no-repeat scroll 0 0 transparent;
+    background: url("../images/bullets.png") no-repeat scroll 0 0%, url("../images/header_picture1.png") no-repeat;
     float: right;
     height: 427px;
     margin: -35px -20px;
@@ -60,7 +59,7 @@ img, div {
     z-index: 5;
 }
 .line {
-    background: url("../images/line.png") no-repeat scroll 0 0 transparent;
+    background: url("../images/line.png") no-repeat;
     height: 20px;
     margin-right: 5px;
     margin-top: 6px;
@@ -79,7 +78,7 @@ img, div {
     z-index: 2;
 }
 .left_bg {
-    background: url("../images/left_bg.png") no-repeat scroll 0 0 transparent;
+    background: url("../images/left_bg.png") no-repeat;
     float: left;
     height: 907px;
     margin: -25px 0;
@@ -88,8 +87,7 @@ img, div {
     z-index: 2;
 }
 .pipe {
-    background: url("../images/pipe.png") no-repeat scroll 0 0 transparent;
-
+    background: url("../images/pipe.png") no-repeat;
     height: 20px;
     position: absolute;
     top: 235px;
@@ -97,7 +95,7 @@ img, div {
     z-index: 3;
 }
 #projectors {
-    background: url("../images/projectors_no_light.png") no-repeat scroll 0 0 transparent;
+    background: url("../images/projectors_no_light.png") no-repeat;
     height: 105px;
     margin-left: 10px;
     position: absolute;
@@ -106,7 +104,7 @@ img, div {
     z-index: 3;
 }
 .projectors_light {
-    background: url("../images/projectors_light.png") no-repeat scroll 0 0 transparent;
+    background: url("../images/projectors_light.png") no-repeat;
     display: none;
     float: right;
     height: 150px;
@@ -125,10 +123,10 @@ img, div {
     z-index: 4;
 }
 .menu_catalog {
-    background: url("../images/menu_images/catalog.png") no-repeat scroll 0 0 transparent;
+    background: url("../images/menu_images/catalog.png") no-repeat;
 }
 .menu_catalog:hover {
-    background: url("../images/menu_images/catalog_hover.png") no-repeat scroll 0 0 transparent;
+    background: url("../images/menu_images/catalog_hover.png") no-repeat;
 }
 .menu_title {
     font-size: 14px;
@@ -136,10 +134,10 @@ img, div {
     text-align: center;
 }
 .menu_galery {
-    background: url("../images/menu_images/gallery.png") no-repeat scroll 0 0 transparent;
+    background: url("../images/menu_images/gallery.png") no-repeat;
 }
 .menu_galery:hover {
-    background: url("../images/menu_images/gallery_hover.png") no-repeat scroll 0 0 transparent;
+    background: url("../images/menu_images/gallery_hover.png") no-repeat;
 }
 .menu_margins {
     height: 52px;
@@ -155,37 +153,37 @@ img, div {
     z-index: 4;
 }
 .menu_trailers {
-    background: url("../images/menu_images/trailers.png") no-repeat scroll 0 0 transparent;
+    background: url("../images/menu_images/trailers.png") no-repeat;
     margin-right: 4px;
 }
 .menu_trailers:hover {
-    background: url("../images/menu_images/trailers_hover.png") no-repeat scroll 0 0 transparent;
+    background: url("../images/menu_images/trailers_hover.png") no-repeat;
     margin-right: 4px;
 }
 .menu_novinki {
-    background: url("../images/menu_images/novinki.png") no-repeat scroll 0 0 transparent;
+    background: url("../images/menu_images/novinki.png") no-repeat;
 }
 .menu_novinki:hover {
-    background: url("../images/menu_images/novinki_hover.png") no-repeat scroll 0 0 transparent;
+    background: url("../images/menu_images/novinki_hover.png") no-repeat;
 }
 .menu_sotrudniki {
-    background: url("../images/menu_images/sotrudniki.png") no-repeat scroll 0 0 transparent;
+    background: url("../images/menu_images/sotrudniki.png") no-repeat;
     height: 62px;
     margin-top: 7px;
 }
 .menu_sotrudniki:hover {
-    background: url("../images/menu_images/sotrudniki_hover.png") no-repeat scroll 0 0 transparent;
+    background: url("../images/menu_images/sotrudniki_hover.png") no-repeat;
     height: 62px;
     margin-top: 7px;
 }
 .menu_about_us {
-    background: url("../images/menu_images/aboutUs.png") no-repeat scroll 0 0 transparent;
+    background: url("../images/menu_images/aboutUs.png") no-repeat;
 }
 .menu_about_us:hover {
-    background: url("../images/menu_images/aboutUs_hover.png") no-repeat scroll 0 0 transparent;
+    background: url("../images/menu_images/aboutUs_hover.png") no-repeat;
 }
 #main-header-menu {
-    background: url("../images/header_menu_bg.png") no-repeat scroll 0 0 transparent;
+    background: url("../images/header_menu_bg.png") no-repeat;
     float: right;
     height: 110px;
     margin: -30px 205px;
@@ -215,7 +213,7 @@ ul {
     z-index: 4;
 }
 .definition_bg {
-    background: url("../images/definition_bg.png") no-repeat scroll 0 0 transparent;
+    background: url("../images/definition_bg.png") no-repeat;
     height: 30px;
     margin-left: 20%;
     position: relative;
@@ -224,37 +222,35 @@ ul {
 .definition > span {
     color: #FEB957;
 }
-#right_side {
-    float: right;
-    margin-right: 60px;
-}
-.login_password {
-    background-color: black;
-    border: 1px solid;
-    border-radius: 4px 4px 4px 4px;
-    height: 30px;
-    margin-bottom: 15px;
-    margin-top: 5px;
-    opacity: 0.5;
-    padding-left: 10px;
-    width: 260px;
-}
-#right_side span {
-    display: block;
-    float: left;
-}
-.reg_strelka1 {
-    background: url("../images/reg_strlelka.png") no-repeat scroll 0 4px transparent;
-    height: 20px;
-    margin-left: 20%;
-    width: 30px;
-}
-.reg_strelka2 {
-    background: url("../images/reg_strlelka.png") no-repeat scroll 0 4px transparent;
-    height: 20px;
-    margin-left: 23%;
-    width: 30px;
-}
 .float_right {
     float: right;
+}
+.reklama
+{
+    position: relative;
+}
+.banner
+{
+    border: 1px solid #ffba57;
+    float: right;
+    width: 271px;
+    height: 145px;
+    position: relative;
+    background-color: #856224;
+    opacity: 0.5;
+    border-radius: 5px;
+    right: 55px;
+    top: 90px;
+}
+.reklama > span
+{
+    display: block;
+    position: relative;
+    top: -25px;
+    color: #ffffff;
+    font-size: 27px;
+    width: 270px;
+    float: right;
+    text-align: center;
+    right: 55px;
 }
