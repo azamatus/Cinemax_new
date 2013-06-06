@@ -92,12 +92,7 @@
 }
 /*end of left_header_menu*/
 /* middle header slider*/
-#mid_picture
-{
-    text-align: center;
-    position: relative;
-    z-index: 1;
-}
+
 #mid_picture span
 {
     display: inline-block;

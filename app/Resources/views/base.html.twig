@@ -91,6 +91,7 @@
         {% block menu %}
         {% endblock %}
         {% block login %}
+            <div class="log_reg">
             {% if app.user and is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                 <div class="user_login">
                     <div class="float_left">{{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }}
@@ -104,14 +105,21 @@
                     </div>
                 </div>
             {% else %}
-                <a href="{{ path('fos_user_registration_register') }}">
-                    <div class="user_registration">
-                        Зарегистрироваться
-                    </div>
+                <a href="{{ path('fos_user_registration_register') }}" class="register">
+                    <div class="user_registration"></div>
+                    <div class="user_registration_hover"></div>
+                    <span class="label_register">РЕГИСТРАЦИЯ</span>
+                    <span class="reg_strelka"></span>
                 </a>
-                {% render("ApplicationSonataUserBundle:Security:loginBase") %}
+                    <div class="forgot_password"><a href="{{ path('fos_user_resetting_request') }}">ЗАБЫЛИ ПАРОЛЬ?</a></div>
+                 {% render("ApplicationSonataUserBundle:Security:loginBase") %}
             {% endif %}
+            </div>
         {% endblock %}
+        <div class="reklama">
+            <div class="banner"></div>
+            <span>МЕСТО ДЛЯ<br>ВАШЕЙ РЕКЛАМЫ</span>
+        </div>
     </div>
 
 </header>
@@ -123,9 +131,3 @@
 
 
 </html>
-{#<div id="right_side">#}
-        {#<span>ЛОГИН</span><div class="reg_strelka1"></div>#}
-        {#<input id="login" class="login_password" type="text" value="Введите свой логин"/><br>#}
-        {#<span>ПАРОЛЬ</span><div class="reg_strelka2"></div>#}
-        {#<input id="password" class="login_password" type="password" value="password"/>#}
-{#</div>#}
