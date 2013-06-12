@@ -1,0 +1,123 @@
+<?php
+
+namespace Cinemax\CinemaxBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Discs
+ *
+ * @ORM\Table(name="discs")
+ * @ORM\Entity
+ */
+class Discs
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=100, nullable=false)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text", nullable=true)
+     */
+    private $description;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="quantity", type="integer", nullable=true)
+     */
+    private $quantity;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date", type="datetime", nullable=true)
+     */
+    private $date;
+
+    /**
+     * @var \Types
+     *
+     * @ORM\ManyToOne(targetEntity="Types")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="type_id", referencedColumnName="id")
+     * })
+     */
+    private $type;
+
+    /**
+     * @var \Countries
+     *
+     * @ORM\ManyToOne(targetEntity="Countries")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="country_id", referencedColumnName="id")
+     * })
+     */
+    private $country;
+
+    /**
+     * @var \Janrs
+     *
+     * @ORM\ManyToOne(targetEntity="Janrs")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="janr_id", referencedColumnName="id")
+     * })
+     */
+    private $janr;
+
+    /**
+     * @var \Formats
+     *
+     * @ORM\ManyToOne(targetEntity="Formats")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="format_id", referencedColumnName="id")
+     * })
+     */
+    private $format;
+
+    /**
+     * @var \MediaGallery
+     *
+     * @ORM\ManyToOne(targetEntity="MediaGallery")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="poster_id", referencedColumnName="id")
+     * })
+     */
+    private $poster;
+
+    /**
+     * @var \Producers
+     *
+     * @ORM\ManyToOne(targetEntity="Producers")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="producer_id", referencedColumnName="id")
+     * })
+     */
+    private $producer;
+
+    /**
+     * @var \Translations
+     *
+     * @ORM\ManyToOne(targetEntity="Translations")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="translation_id", referencedColumnName="id")
+     * })
+     */
+    private $translation;
+
+
+}

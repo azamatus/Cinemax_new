@@ -1,0 +1,32 @@
+<?php
+
+namespace Cinemax\CinemaxBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Formats
+ *
+ * @ORM\Table(name="formats")
+ * @ORM\Entity
+ */
+class Formats
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=100, nullable=true)
+     */
+    private $name;
+
+
+}
