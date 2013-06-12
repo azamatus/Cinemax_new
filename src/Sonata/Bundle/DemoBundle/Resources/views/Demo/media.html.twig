@@ -3,15 +3,17 @@
 <div>
 
     <p>
-        The <code>form_media_type</code> allows to add a Media to an entity. The Media information will be stored in a dedicated media table. <br />
+        The <code>form_media_type</code> allows to add a Media to an entity. The Media information will be stored in a
+        dedicated media table. <br/>
 
-        <br />
+        <br/>
         <strong>Example</strong> :
-        Please enter a youtube url and press the "Preview Video" button. <br />
+        Please enter a youtube url and press the "Preview Video" button. <br/>
 
     </p>
+
     <form method="POST">
-        {{ form_widget(form.media.binaryContent, {'attr': {'class': 'span8'}}) }}
+        {{ form_widget(form.media.binaryContent, {'attr': {'class': 'span8' }}) }}
 
         {{ form_rest(form) }}
 
@@ -21,7 +23,6 @@
 
 {% if media and media.providerReference %}
     <h2>Preview : {{ media.name }}</h2>
-
     {% media media, 'reference' %}
 
     <p>
