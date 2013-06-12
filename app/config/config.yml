@@ -3,6 +3,7 @@ imports:
     - { resource: security.yml }
     - { resource: fos_user.yml }
     - { resource: @CinemaxHeaderSliderBundle/Resources/config/admin.xml }
+    - { resource: @CinemaxBundle/Resources/config/admin.xml }
 
     # Sonata Bundles
     - { resource: sonata/sonata_admin.yml }

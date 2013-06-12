@@ -1,0 +1,101 @@
+<?php
+
+namespace Cinemax\CinemaxBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CountriesJanrs
+ *
+ * @ORM\Table(name="countries_janrs")
+ * @ORM\Entity
+ */
+class CountriesJanrs
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \Countries
+     *
+     * @ORM\ManyToOne(targetEntity="Countries")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="country_id", referencedColumnName="id")
+     * })
+     */
+    private $country;
+
+    /**
+     * @var \Janrs
+     *
+     * @ORM\ManyToOne(targetEntity="Janrs")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="janr_id", referencedColumnName="id")
+     * })
+     */
+    private $janr;
+
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set country
+     *
+     * @param \Cinemax\CinemaxBundle\Entity\Countries $country
+     * @return CountriesJanrs
+     */
+    public function setCountry(\Cinemax\CinemaxBundle\Entity\Countries $country = null)
+    {
+        $this->country = $country;
+    
+        return $this;
+    }
+
+    /**
+     * Get country
+     *
+     * @return \Cinemax\CinemaxBundle\Entity\Countries 
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * Set janr
+     *
+     * @param \Cinemax\CinemaxBundle\Entity\Janrs $janr
+     * @return CountriesJanrs
+     */
+    public function setJanr(\Cinemax\CinemaxBundle\Entity\Janrs $janr = null)
+    {
+        $this->janr = $janr;
+    
+        return $this;
+    }
+
+    /**
+     * Get janr
+     *
+     * @return \Cinemax\CinemaxBundle\Entity\Janrs 
+     */
+    public function getJanr()
+    {
+        return $this->janr;
+    }
+}

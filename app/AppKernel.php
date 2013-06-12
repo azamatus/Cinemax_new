@@ -72,6 +72,7 @@ class AppKernel extends Kernel
 
             // Enable this if you want to audit backend action
             new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),
+            new Cinemax\CinemaxBundle\CinemaxBundle(),
             new Cinemax\MenuBundle\CinemaxMenuBundle(),
             new Cinemax\HeaderSliderBundle\CinemaxHeaderSliderBundle(),
         );
