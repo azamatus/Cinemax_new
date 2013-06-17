@@ -1,9 +1,5 @@
-cinemax_header_slider:
-    resource: "@CinemaxHeaderSliderBundle/Resources/config/routing.yml"
-    prefix:   /
-
-cinemax_header:
-    resource: "@CinemaxMenuBundle/Resources/config/routing.yml"
+cinemax_homepage:
+    resource: "@CinemaxBundle/Resources/config/routing.yml"
     prefix:   /
 
 # Internal routing configuration to handle ESI

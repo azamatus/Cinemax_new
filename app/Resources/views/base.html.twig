@@ -23,8 +23,7 @@
     <div class="line2"></div>
     <div class="year"><img src="{{ asset('public/images/2013.png') }}" alt="2013"/></div>
     <div class="float_left">
-        <div class="header_logo"><a href="{{ path("cinemax_homepage") }}"><img
-                        src="{{ asset('public/images/logo.png') }}" alt="logo"/></a></div>
+        <div class="header_logo"><a href="{{ path("cinemax_homepage") }}"><img class="logo" src="{{ asset('public/images/logo.png') }}" alt="logo"/></a></div>
         <div class="logo_shadow"></div>
         <span class="header_title clearbox">ПЕРВЫЙ ОФФИЦИАЛЬНЫЙ САЙТ<br>ПРОИЗВОДСТВА КОМПАКТ-ДИСКОВ</span>
     </div>
@@ -89,6 +88,7 @@
     </div>
     <div>
         {% block menu %}
+            {% render("CinemaxMenuBundle:Menu:index") %}
         {% endblock %}
         {% block login %}
             <div class="log_reg">
@@ -123,11 +123,8 @@
     </div>
 
 </header>
-
+<hr class="main_hr clearbox">
 {% block body %}
 {% endblock %}
-
 </body>
-
-
 </html>

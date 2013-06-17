@@ -4,7 +4,7 @@ namespace Cinemax\MenuBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class MainController extends Controller
+class MenuController extends Controller
 {
     public function indexAction()
     {

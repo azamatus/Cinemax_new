@@ -13,5 +13,21 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class ContentController  extends Controller{
 
+    public function getCatalogAction()
+    {
+        $discs = $this ->getDoctrine()
+            ->getRepository("CinemaxBundle:Discs")
+            ->findAll();
 
+        return $this->render('CinemaxBundle:content:catalog.html.twig', array('discs' => $discs));
+    }
+
+    public function getSliderAction()
+    {
+        $discs = $this -> getDoctrine()
+            ->getRepository("CinemaxBundle:Discs")
+            ->findAll();
+
+        return $this->render('CinemaxBundle:content:get_slider.html.twig', array('discs' => $discs));
+    }
 }

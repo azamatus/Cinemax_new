@@ -50,14 +50,14 @@ class Discs
     private $date;
 
     /**
-     * @var \Types
+     * @var \Gallery
      *
-     * @ORM\ManyToOne(targetEntity="Types")
+     * @ORM\ManyToOne(targetEntity="\Application\Sonata\MediaBundle\Entity\Gallery" )
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="type_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="poster_id", referencedColumnName="id")
      * })
      */
-    private $type;
+    private $poster;
 
     /**
      * @var \Countries
@@ -90,16 +90,6 @@ class Discs
     private $format;
 
     /**
-     * @var \Gallery
-     *
-     * @ORM\ManyToOne(targetEntity="Application\Sonata\MediaBundle\Entity\Gallery")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="poster_id", referencedColumnName="id")
-     * })
-     */
-    private $poster;
-
-    /**
      * @var \Producers
      *
      * @ORM\ManyToOne(targetEntity="Producers")
@@ -118,6 +108,16 @@ class Discs
      * })
      */
     private $translation;
+
+    /**
+     * @var \Types
+     *
+     * @ORM\ManyToOne(targetEntity="Types")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="type_id", referencedColumnName="id")
+     * })
+     */
+    private $type;
 
 
 
@@ -224,26 +224,26 @@ class Discs
     }
 
     /**
-     * Set type
+     * Set poster
      *
-     * @param \Cinemax\CinemaxBundle\Entity\Types $type
+     * @param \Application\Sonata\MediaBundle\Entity\Gallery $poster
      * @return Discs
      */
-    public function setType(\Cinemax\CinemaxBundle\Entity\Types $type = null)
+    public function setPoster(\Application\Sonata\MediaBundle\Entity\Gallery $poster = null)
     {
-        $this->type = $type;
+        $this->poster = $poster;
     
         return $this;
     }
 
     /**
-     * Get type
+     * Get poster
      *
-     * @return \Cinemax\CinemaxBundle\Entity\Types 
+     * @return \Application\Sonata\MediaBundle\Entity\Gallery
      */
-    public function getType()
+    public function getPoster()
     {
-        return $this->type;
+        return $this->poster;
     }
 
     /**
@@ -316,29 +316,6 @@ class Discs
     }
 
     /**
-     * Set poster
-     *
-     * @param \Application\Sonata\MediaBundle\Entity\Gallery $poster
-     * @return Discs
-     */
-    public function setPoster(\Application\Sonata\MediaBundle\Entity\Gallery $poster = null)
-    {
-        $this->poster = $poster;
-    
-        return $this;
-    }
-
-    /**
-     * Get poster
-     *
-     * @return \Application\Sonata\MediaBundle\Entity\Gallery
-     */
-    public function getPoster()
-    {
-        return $this->poster;
-    }
-
-    /**
      * Set producer
      *
      * @param \Cinemax\CinemaxBundle\Entity\Producers $producer
@@ -382,5 +359,28 @@ class Discs
     public function getTranslation()
     {
         return $this->translation;
+    }
+
+    /**
+     * Set type
+     *
+     * @param \Cinemax\CinemaxBundle\Entity\Types $type
+     * @return Discs
+     */
+    public function setType(\Cinemax\CinemaxBundle\Entity\Types $type = null)
+    {
+        $this->type = $type;
+    
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return \Cinemax\CinemaxBundle\Entity\Types 
+     */
+    public function getType()
+    {
+        return $this->type;
     }
 }

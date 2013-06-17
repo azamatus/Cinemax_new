@@ -1,0 +1,46 @@
+.ui-carousel {
+	height: 370px!important;
+    width: 445px!important;
+	position: relative; /*for ie7 to work e.g in html carousels*/
+    display: inline-block;
+    padding: 10px 10px;
+    margin-bottom: -20px;
+}
+
+.ui-carousel > .wrapper {
+    margin: 0;
+    padding: 0;
+    width: 9999px;
+}
+
+#slider-carousel-prev
+{
+    background: url("../images/slider_nav.png") no-repeat;
+    height: 80px;
+    width: 45px;
+    left: -65px;
+    position: absolute;
+    top:0;
+    margin-top: 140px;
+    display: block;
+
+}
+#slider-carousel-next
+{
+    background: url("../images/slider_nav.png") no-repeat;
+    height: 80px;
+    width: 45px;
+    right: -7%;
+    position: absolute;
+    top: 0;
+    margin-top: 140px;
+    display: block;
+    background-position: 100% 0%
+}
+.slider_disc
+{
+    width: 445px!important;
+    height: 345px!important;
+    border: 2px solid #ffebc2;
+    border-radius: 5px;
+}

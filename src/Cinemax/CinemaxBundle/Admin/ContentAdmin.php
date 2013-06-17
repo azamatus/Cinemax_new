@@ -55,11 +55,17 @@ class ContentAdmin extends Admin{
     protected function configureListFields(ListMapper $listmapper)
     {
         $listmapper
-            ->addIdentifier('id', null, array('label' => 'ID'))
+            ->add('id', null, array('label' => 'ID'))
             ->addIdentifier('name', null, array('label' => 'Название'))
             ->addIdentifier('description', null, array('label' => 'Описание'))
-            ->add('quantity', null, array('editable' => true,'label' => 'Цена'))
-            ->add('format', 'sonata_type_model', array('editable' => true,'label' => 'Формат'));
+            ->addIdentifier('quantity', null, array('editable' => true,'label' => 'Количество'))
+            ->add('format', null , array('editable' => true,'label' => 'Формат'))
+            ->add('country', null, array('label' => 'Страна'))
+            ->add('janr', null, array('label' => 'Жанр'))
+            ->add('producer', null, array('label' => 'Производитель'))
+            ->add('translation', null, array('label' => 'Перевод'))
+            ->add('type', null, array('label' => 'Тип'))
+            ->add('date','date',array('label'=>'Дата выпуска'));
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)

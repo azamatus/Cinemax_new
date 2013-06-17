@@ -7,12 +7,17 @@
 body {
     background: url("../images/bg.png") repeat scroll center center #000000;
     border: 1px solid #F2E297;
-    border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     margin-top: 10px;
     width: 1110px;
 }
+.logo
+{
+    border: none;
+}
 a, a:hover, a:link, a:visited img {
-    border: 0;
     text-decoration: none;
 }
 .clearbox
@@ -81,7 +86,7 @@ img, div {
     background: url("../images/left_bg.png") no-repeat;
     float: left;
     height: 907px;
-    margin: -25px 0;
+    margin: -25px 1px;
     position: absolute;
     width: 170px;
     z-index: 2;
@@ -117,7 +122,7 @@ img, div {
     clear: right;
     color: #FFE88B;
     float: left;
-    margin: -25px 30px;
+    margin: -25px 25px;
     position: relative;
     text-align: center;
     z-index: 4;
@@ -238,7 +243,9 @@ ul {
     position: relative;
     background-color: #856224;
     opacity: 0.5;
-    border-radius: 5px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
     right: 55px;
     top: 90px;
 }
@@ -253,4 +260,13 @@ ul {
     float: right;
     text-align: center;
     right: 55px;
+}
+.main_hr
+{
+    position: relative;
+    top: 55px;
+    border: none;
+    height: 2px;
+    background-color: #F2E297;
+
 }
