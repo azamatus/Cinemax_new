@@ -1,10 +1,7 @@
 .ui-carousel {
-	height: 370px!important;
-    width: 445px!important;
 	position: relative; /*for ie7 to work e.g in html carousels*/
     display: inline-block;
     padding: 10px 10px;
-    margin-bottom: -20px;
 }
 
 .ui-carousel > .wrapper {
@@ -35,7 +32,12 @@
     top: 0;
     margin-top: 140px;
     display: block;
-    background-position: 100% 0%
+    background-position: 100% 0%;
+
+}
+#slider-carousel-next, #slider-carousel-prev:focus
+{
+    outline: none;
 }
 .slider_disc
 {
@@ -43,4 +45,60 @@
     height: 345px!important;
     border: 2px solid #ffebc2;
     border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.description
+{
+    display: inline-block;
+}
+.slider_description
+{
+    border: 2px solid #ffebc2;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    float: left;
+    width: 400px;
+    position: relative;
+    margin-top: -345px;
+    height: 344px;
+    margin-left: 10px;
+}
+.slider_description > span
+{
+    display: block;
+    width: 260px;
+    height: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 15px auto 15px;
+    border: 1px solid;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    padding-top: 5px;
+    background-color: #000000;
+}
+.opacity
+{
+    float: left;
+    width: 400px;
+    margin-left: 10px;
+    height: 346px;
+    border-radius: 5px;
+    position: relative;
+    opacity: 0.5;
+    background-color: #000000;
+}
+.disc_desc
+{
+    margin-left: -15px;
+}
+
+.disc_desc ul li span
+{
+    color: #ffffff;
+    text-transform: uppercase;
+
 }

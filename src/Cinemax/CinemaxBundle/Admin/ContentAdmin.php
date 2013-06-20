@@ -25,6 +25,7 @@ class ContentAdmin extends Admin{
             ->add('id', null, array('label' => 'ID'))
             ->add('name', null, array('label' => 'Название'))
             ->add('description', null, array('label' => 'Описание'))
+            ->add('active', null, array('label' => 'Активен'))
             ->add('quantity', null , array('label' => 'Количество фильмов'))
             ->add('poster', 'sonata_media_type', array('label' => 'Постер', 'provider' => 'sonata.media.provider.image', 'context' => 'default'))
             ->add('format', null, array('label' => 'Формат'))
@@ -41,6 +42,7 @@ class ContentAdmin extends Admin{
         $formmapper
             ->add('name', null, array('label' => 'Название'))
             ->add('description', 'textarea', array('label' => 'Описание', 'required' => false))
+            ->add('active', null, array('label' => 'Активен'))
             ->add('quantity', null, array('label' => 'Количество фильмов'))
             ->add('poster', 'sonata_type_model_list', array('required' => false, 'label' => 'Постеры'), array('link_parameters' => array('context' => 'default')))
             ->add('format', null, array('label' => 'Формат'))
@@ -58,6 +60,7 @@ class ContentAdmin extends Admin{
             ->add('id', null, array('label' => 'ID'))
             ->addIdentifier('name', null, array('label' => 'Название'))
             ->addIdentifier('description', null, array('label' => 'Описание'))
+            ->add('active', 'boolean', array('editable' => true,'label' => 'Активен'))
             ->addIdentifier('quantity', null, array('editable' => true,'label' => 'Количество'))
             ->add('format', null , array('editable' => true,'label' => 'Формат'))
             ->add('country', null, array('label' => 'Страна'))

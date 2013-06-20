@@ -18,11 +18,13 @@ jQuery(function($)
             },
             auto:
             {
-                enabled: true,
+                enabled: false,
                 interval: 1000
             },
-            width: 445,
+            width: 865,
             height: 345,
+            margin: 0,
+
             start: generatePages
         }
     );
@@ -38,14 +40,17 @@ jQuery(function($)
 
             $(_link)
                 .bind("click", {page: i},
+
                 function( event )
                 {
                     $( "#carousel_catalog" ).rcarousel( "goToPage", event.data.page );
                     event.preventDefault();
                 }
+
             )
 
         }
 
     }
+
 });

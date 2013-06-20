@@ -36,6 +36,13 @@ class Discs
     private $description;
 
     /**
+     * @var boolean $active
+     *
+     * @ORM\Column(name="active", type="boolean", nullable=true)
+     */
+    private $active;
+
+    /**
      * @var integer
      *
      * @ORM\Column(name="quantity", type="integer", nullable=true)
@@ -178,6 +185,27 @@ class Discs
     }
 
     /**
+     * Set active
+     * @param boolean $active
+     * @return Discs
+     */
+    public function setActive($active)
+    {
+        $this->active = $active;
+
+        return $this;
+    }
+
+    /**
+     * Get active
+     *
+     * @return boolean
+     */
+    public function getActive()
+    {
+        return $this -> active;
+    }
+    /**
      * Set quantity
      *
      * @param integer $quantity
@@ -222,6 +250,7 @@ class Discs
     {
         return $this->date;
     }
+
 
     /**
      * Set poster
