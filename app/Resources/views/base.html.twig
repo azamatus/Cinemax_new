@@ -43,36 +43,36 @@
     <div id="main-header-menu" class="clearbox">
         <ul>
             <li id="menu_bounce" class="item_margins">
-                <a href="#">
+                <a href="#" id="no_outline">
                     <span class="menu_catalog menu_margins"></span>
                     <span class="menu_title">КАТАЛОГ</span></a>
             </li>
             <li id="menu_bounce" class="item_margins">
-                <a href="#">
+                <a href="#" id="no_outline">
                     <span class="menu_galery menu_margins"></span>
                     <span class="menu_title">ФОТОГАЛЕРЕЯ</span>
                 </a>
             </li>
             <li id="menu_bounce" class="item_margins">
-                <a href="#">
+                <a href="#" id="no_outline">
                     <span class="menu_trailers menu_margins"></span>
                     <span class="menu_title">ТРЕЙЛЕРЫ</span>
                 </a>
             </li>
             <li id="menu_bounce" class="item_margins">
-                <a href="#">
+                <a href="#" id="no_outline">
                     <span class="menu_novinki menu_margins"></span>
                     <span class="menu_title">НОВИНКИ</span>
                 </a>
             </li>
             <li id="menu_bounce" class="item_margins">
-                <a href="#">
+                <a href="#" id="no_outline">
                     <span class="menu_sotrudniki menu_margins"></span>
                     <span class="menu_title">СОТРУДНИКИ</span>
                 </a>
             </li>
             <li id="menu_bounce" class="item_margins">
-                <a href="#">
+                <a href="#" id="no_outline">
                     <span class="menu_about_us menu_margins"></span>
                     <span class="menu_title">О НАС</span>
         </a>
@@ -105,7 +105,7 @@
                     </div>
                 </div>
             {% else %}
-                <a href="{{ path('fos_user_registration_register') }}" class="register">
+                <a href="{{ path('fos_user_registration_register') }}#reg" class="register">
                     <div class="user_registration"></div>
                     <div class="user_registration_hover"></div>
                     <span class="label_register">РЕГИСТРАЦИЯ</span>
@@ -126,5 +126,19 @@
 <hr class="main_hr clearbox">
 {% block body %}
 {% endblock %}
+<footer>
+    <div class="phones">
+        <span class="phone_icon">+996 552 556 516</span>
+        <span class="phone_icon">+996 777 755 454</span>
+        <span class="phone_icon">+996 771 384 444</span>
+        <span class="phone_icon">+996 778 700 600</span>
+    </div>
+    <div class="cinemax_info">
+        <div class="float_left email">Официальный сайт: www.cinemax.kg / E-Mail: Cinemax.kg@mail.ru</div>
+        <div class="author">Design by: Jumaev. T.</div>
+    </div>
+        <div class="footer_logo">
+    </div>
+</footer>
 </body>
 </html>

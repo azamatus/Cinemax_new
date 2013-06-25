@@ -45,9 +45,24 @@ class Discs
     /**
      * @var integer
      *
-     * @ORM\Column(name="quantity", type="integer", nullable=true)
+     * @ORM\Column(name="quantity_of_films", type="integer", nullable=true)
      */
-    private $quantity;
+    private $quantityFilms;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="quantity_of_series", type="integer", nullable=true)
+     */
+    private $quantitySeries;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="quantity_of_clips", type="integer", nullable=true)
+     */
+    private $quantityClips;
+
 
     /**
      * @var \DateTime
@@ -206,27 +221,73 @@ class Discs
         return $this -> active;
     }
     /**
-     * Set quantity
+     * Set quantityFilms
      *
-     * @param integer $quantity
+     * @param integer $quantityFilms
      * @return Discs
      */
-    public function setQuantity($quantity)
+    public function setQuantityFilms($quantityFilms)
     {
-        $this->quantity = $quantity;
+        $this->quantityFilms = $quantityFilms;
     
         return $this;
     }
 
     /**
-     * Get quantity
+     * Get quantityFilms
      *
      * @return integer 
      */
-    public function getQuantity()
+    public function getQuantityFilms()
     {
-        return $this->quantity;
+        return $this->quantityFilms;
     }
+
+    /**
+     * Set quantitySeries
+     *
+     * @param integer $quantitySeries
+     * @return Discs
+     */
+    public function setQuantitySeries($quantitySeries)
+    {
+        $this->quantitySeries = $quantitySeries;
+
+        return $this;
+    }
+
+    /**
+     * Get quantitySeries
+     *
+     * @return integer
+     */
+    public function getQuantitySeries()
+    {
+        return $this->quantitySeries;
+    }
+    /**
+     * Set quantityClips
+     *
+     * @param integer $quantityClips
+     * @return Discs
+     */
+    public function setQuantityClips($quantityClips)
+    {
+        $this->quantityClips = $quantityClips;
+
+        return $this;
+    }
+
+    /**
+     * Get quantityClips
+     *
+     * @return integer
+     */
+    public function getQuantityClips()
+    {
+        return $this->quantityClips;
+    }
+
 
     /**
      * Set date

@@ -4,8 +4,8 @@
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    width: 1070px;
-    height: 1055px;
+    width: 1035px;
+    height: 672px;
     clear: both;
     position: relative;
     top: 70px;
@@ -14,7 +14,7 @@
 {
     background: url("../images/content_bg.jpg");
     width: 1012px;
-    height: 61%;
+    height: 650px;
     background-color: #000000 ;
     opacity: 0.8;
     -moz-opacity: 0.8;
@@ -25,7 +25,6 @@
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     margin: 10px auto;
-
 }
 .disc
 {
@@ -37,7 +36,6 @@
 {
     display: block;
 }
-
 .disc a > span
 {
     text-transform: uppercase;
