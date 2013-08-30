@@ -8,6 +8,6 @@ class MainController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('CinemaxBundle:layout:layout.html.twig');
+        return $this->render('CinemaxBundle:content:content.html.twig');
     }
 }

@@ -50,14 +50,14 @@ class Discs
     private $date;
 
     /**
-     * @var \Types
+     * @var \MediaGallery
      *
-     * @ORM\ManyToOne(targetEntity="Types")
+     * @ORM\ManyToOne(targetEntity="MediaGallery")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="type_id", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="poster_id", referencedColumnName="id")
      * })
      */
-    private $type;
+    private $poster;
 
     /**
      * @var \Countries
@@ -90,16 +90,6 @@ class Discs
     private $format;
 
     /**
-     * @var \MediaGallery
-     *
-     * @ORM\ManyToOne(targetEntity="MediaGallery")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="poster_id", referencedColumnName="id")
-     * })
-     */
-    private $poster;
-
-    /**
      * @var \Producers
      *
      * @ORM\ManyToOne(targetEntity="Producers")
@@ -118,6 +108,16 @@ class Discs
      * })
      */
     private $translation;
+
+    /**
+     * @var \Types
+     *
+     * @ORM\ManyToOne(targetEntity="Types")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="type_id", referencedColumnName="id")
+     * })
+     */
+    private $type;
 
 
 }

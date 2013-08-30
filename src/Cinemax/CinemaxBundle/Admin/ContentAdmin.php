@@ -25,7 +25,10 @@ class ContentAdmin extends Admin{
             ->add('id', null, array('label' => 'ID'))
             ->add('name', null, array('label' => 'Название'))
             ->add('description', null, array('label' => 'Описание'))
-            ->add('quantity', null , array('label' => 'Количество фильмов'))
+            ->add('active', null, array('label' => 'Активен'))
+            ->add('quantityFilms', null , array('label' => 'Количество фильмов'))
+            ->add('quantitySeries', null , array('label' => 'Количество серий'))
+            ->add('quantityClips', null , array('label' => 'Количество клипов'))
             ->add('poster', 'sonata_media_type', array('label' => 'Постер', 'provider' => 'sonata.media.provider.image', 'context' => 'default'))
             ->add('format', null, array('label' => 'Формат'))
             ->add('country', null, array('label' => 'Страна'))
@@ -41,7 +44,10 @@ class ContentAdmin extends Admin{
         $formmapper
             ->add('name', null, array('label' => 'Название'))
             ->add('description', 'textarea', array('label' => 'Описание', 'required' => false))
-            ->add('quantity', null, array('label' => 'Количество фильмов'))
+            ->add('active', null, array('label' => 'Активен'))
+            ->add('quantityFilms', null , array('label' => 'Количество фильмов'))
+            ->add('quantitySeries', null , array('label' => 'Количество серий'))
+            ->add('quantityClips', null , array('label' => 'Количество клипов'))
             ->add('poster', 'sonata_type_model_list', array('required' => false, 'label' => 'Постеры'), array('link_parameters' => array('context' => 'default')))
             ->add('format', null, array('label' => 'Формат'))
             ->add('country', null, array('label' => 'Страна'))
@@ -55,11 +61,20 @@ class ContentAdmin extends Admin{
     protected function configureListFields(ListMapper $listmapper)
     {
         $listmapper
-            ->addIdentifier('id', null, array('label' => 'ID'))
+            ->add('id', null, array('label' => 'ID'))
             ->addIdentifier('name', null, array('label' => 'Название'))
             ->addIdentifier('description', null, array('label' => 'Описание'))
-            ->add('quantity', null, array('editable' => true,'label' => 'Цена'))
-            ->add('format', 'sonata_type_model', array('editable' => true,'label' => 'Формат'));
+            ->add('active', 'boolean', array('editable' => true,'label' => 'Активен'))
+            ->addIdentifier('quantityFilms', null, array('editable' => true,'label' => 'Количество фильмов'))
+            ->addIdentifier('quantitySeries', null, array('editable' => true,'label' => 'Количество серий'))
+            ->addIdentifier('quantityClips', null, array('editable' => true,'label' => 'Количество клипов'))
+            ->add('format', null , array('editable' => true,'label' => 'Формат'))
+            ->add('country', null, array('label' => 'Страна'))
+            ->add('janr', null, array('label' => 'Жанр'))
+            ->add('producer', null, array('label' => 'Производитель'))
+            ->add('translation', null, array('label' => 'Перевод'))
+            ->add('type', null, array('label' => 'Тип'))
+            ->add('date','date',array('label'=>'Дата выпуска'));
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)

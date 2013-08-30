@@ -23,8 +23,7 @@
     <div class="line2"></div>
     <div class="year"><img src="{{ asset('public/images/2013.png') }}" alt="2013"/></div>
     <div class="float_left">
-        <div class="header_logo"><a href="{{ path("cinemax_homepage") }}"><img
-                        src="{{ asset('public/images/logo.png') }}" alt="logo"/></a></div>
+        <div class="header_logo"><a href="{{ path("cinemax_homepage") }}"><img class="logo" src="{{ asset('public/images/logo.png') }}" alt="logo"/></a></div>
         <div class="logo_shadow"></div>
         <span class="header_title clearbox">ПЕРВЫЙ ОФФИЦИАЛЬНЫЙ САЙТ<br>ПРОИЗВОДСТВА КОМПАКТ-ДИСКОВ</span>
     </div>
@@ -44,36 +43,36 @@
     <div id="main-header-menu" class="clearbox">
         <ul>
             <li id="menu_bounce" class="item_margins">
-                <a href="#">
+                <a href="#" id="no_outline">
                     <span class="menu_catalog menu_margins"></span>
                     <span class="menu_title">КАТАЛОГ</span></a>
             </li>
             <li id="menu_bounce" class="item_margins">
-                <a href="#">
+                <a href="#" id="no_outline">
                     <span class="menu_galery menu_margins"></span>
                     <span class="menu_title">ФОТОГАЛЕРЕЯ</span>
                 </a>
             </li>
             <li id="menu_bounce" class="item_margins">
-                <a href="#">
+                <a href="#" id="no_outline">
                     <span class="menu_trailers menu_margins"></span>
                     <span class="menu_title">ТРЕЙЛЕРЫ</span>
                 </a>
             </li>
             <li id="menu_bounce" class="item_margins">
-                <a href="#">
+                <a href="#" id="no_outline">
                     <span class="menu_novinki menu_margins"></span>
                     <span class="menu_title">НОВИНКИ</span>
                 </a>
             </li>
             <li id="menu_bounce" class="item_margins">
-                <a href="#">
+                <a href="#" id="no_outline">
                     <span class="menu_sotrudniki menu_margins"></span>
                     <span class="menu_title">СОТРУДНИКИ</span>
                 </a>
             </li>
             <li id="menu_bounce" class="item_margins">
-                <a href="#">
+                <a href="#" id="no_outline">
                     <span class="menu_about_us menu_margins"></span>
                     <span class="menu_title">О НАС</span>
         </a>
@@ -89,6 +88,7 @@
     </div>
     <div>
         {% block menu %}
+            {% render("CinemaxMenuBundle:Menu:index") %}
         {% endblock %}
         {% block login %}
             <div class="log_reg">
@@ -105,7 +105,7 @@
                     </div>
                 </div>
             {% else %}
-                <a href="{{ path('fos_user_registration_register') }}" class="register">
+                <a href="{{ path('fos_user_registration_register') }}#reg" class="register">
                     <div class="user_registration"></div>
                     <div class="user_registration_hover"></div>
                     <span class="label_register">РЕГИСТРАЦИЯ</span>
@@ -123,11 +123,22 @@
     </div>
 
 </header>
-
+<hr class="main_hr clearbox">
 {% block body %}
 {% endblock %}
-
+<footer>
+    <div class="phones">
+        <span class="phone_icon">+996 552 556 516</span>
+        <span class="phone_icon">+996 777 755 454</span>
+        <span class="phone_icon">+996 771 384 444</span>
+        <span class="phone_icon">+996 778 700 600</span>
+    </div>
+    <div class="cinemax_info">
+        <div class="float_left email">Официальный сайт: www.cinemax.kg / E-Mail: Cinemax.kg@mail.ru</div>
+        <div class="author">Design by: Jumaev. T.</div>
+    </div>
+        <div class="footer_logo">
+    </div>
+</footer>
 </body>
-
-
 </html>

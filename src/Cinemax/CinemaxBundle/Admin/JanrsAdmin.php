@@ -38,5 +38,4 @@ class JanrsAdmin extends Admin {
             ->add('name', null, array('label' => 'Жанр'));
 
     }
-
 }

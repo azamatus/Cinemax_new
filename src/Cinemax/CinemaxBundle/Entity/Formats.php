@@ -62,4 +62,8 @@ class Formats
     {
         return $this->name;
     }
+    public function __toString()
+    {
+        return $this->getName()?$this->getName():"";
+    }
 }
