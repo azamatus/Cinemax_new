@@ -28,16 +28,14 @@
             <span>{{ error|trans({}, 'FOSUserBundle') }}</span>
         {% endif %}
         <form action="{{ path("fos_user_security_check") }}" method="post">
-            <input type="hidden" name="_csrf_token"
-                   value="{% render('ApplicationSonataUserBundle:Security:getToken') %}"/>
+            <input type="hidden" name="_csrf_token" value="{% render('ApplicationSonataUserBundle:Security:getToken') %}"/>
             <span>ЛОГИН</span>
             <div class="reg_strelka1"></div>
             <input type="text" id="login" class="login_password" name="_username" value="Введите свой логин" required="required"/><br>
             <span>ПАРОЛЬ</span>
 
             <div class="reg_strelka2"></div>
-            <input type="password" id="password" class="login_password" name="_password" required="required"
-            value="password"/><br>
+            <input type="password" id="password" class="login_password" name="_password" required="required"value="password"/><br>
             <div class="submit_login">
                 <button class ="button_register" type="submit" class="submit" name="_submit">{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}</button>
             </div>

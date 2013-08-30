@@ -1,3 +1,0 @@
-cinemax_header_slider_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: CinemaxHeaderSliderBundle:Default:index }

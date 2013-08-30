@@ -1,0 +1,12 @@
+<div class="all_catalog">
+    {% for disc in discs %}
+        {% include "CinemaxBundle:content:item.html.twig" with {'disc':disc} %}
+    {% endfor %}
+</div>
+    <script type="text/javascript">
+        $(function()
+        {
+            jQuery('.catalog').jScrollPane();
+        });
+    </script>
+

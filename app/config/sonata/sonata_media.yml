@@ -1,6 +1,3 @@
-#
-# more information can be found here http://sonata-project.org/bundles/media
-#
 sonata_media:
     db_driver:       doctrine_orm # | doctrine_mongodb
     default_context: default
@@ -16,8 +13,8 @@ sonata_media:
                 - sonata.media.provider.vimeo
 
             formats:
-                small: { width: 100, quality: 100}
-                big:   { width: 820 , quality: 100}
+                small: { width: 235, height: 185, quality: 100}
+                big:   { width: 900, height: 700, quality: 100}
 
         news:
             providers:
@@ -30,7 +27,7 @@ sonata_media:
     cdn:
         # define the public base url for the uploaded media
         server:
-            path:      %sonata_media.cdn.host%
+            path:  /cinemax/web/uploads/media # http://media.sonata-project.org/
 
     filesystem:
         # define where the uploaded file will be stored

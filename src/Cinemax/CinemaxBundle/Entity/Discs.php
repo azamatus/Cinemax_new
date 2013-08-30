@@ -36,11 +36,33 @@ class Discs
     private $description;
 
     /**
+     * @var boolean $active
+     *
+     * @ORM\Column(name="active", type="boolean", nullable=true)
+     */
+    private $active;
+
+    /**
      * @var integer
      *
-     * @ORM\Column(name="quantity", type="integer", nullable=true)
+     * @ORM\Column(name="quantity_of_films", type="integer", nullable=true)
      */
-    private $quantity;
+    private $quantityFilms;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="quantity_of_series", type="integer", nullable=true)
+     */
+    private $quantitySeries;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="quantity_of_clips", type="integer", nullable=true)
+     */
+    private $quantityClips;
+
 
     /**
      * @var \DateTime
@@ -50,14 +72,14 @@ class Discs
     private $date;
 
     /**
-     * @var \Types
+     * @var \Gallery
      *
-     * @ORM\ManyToOne(targetEntity="Types")
+     * @ORM\ManyToOne(targetEntity="\Application\Sonata\MediaBundle\Entity\Gallery" )
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="type_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="poster_id", referencedColumnName="id")
      * })
      */
-    private $type;
+    private $poster;
 
     /**
      * @var \Countries
@@ -90,16 +112,6 @@ class Discs
     private $format;
 
     /**
-     * @var \Gallery
-     *
-     * @ORM\ManyToOne(targetEntity="Application\Sonata\MediaBundle\Entity\Gallery")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="poster_id", referencedColumnName="id")
-     * })
-     */
-    private $poster;
-
-    /**
      * @var \Producers
      *
      * @ORM\ManyToOne(targetEntity="Producers")
@@ -118,6 +130,16 @@ class Discs
      * })
      */
     private $translation;
+
+    /**
+     * @var \Types
+     *
+     * @ORM\ManyToOne(targetEntity="Types")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="type_id", referencedColumnName="id")
+     * })
+     */
+    private $type;
 
 
 
@@ -178,27 +200,94 @@ class Discs
     }
 
     /**
-     * Set quantity
-     *
-     * @param integer $quantity
+     * Set active
+     * @param boolean $active
      * @return Discs
      */
-    public function setQuantity($quantity)
+    public function setActive($active)
     {
-        $this->quantity = $quantity;
+        $this->active = $active;
+
+        return $this;
+    }
+
+    /**
+     * Get active
+     *
+     * @return boolean
+     */
+    public function getActive()
+    {
+        return $this -> active;
+    }
+    /**
+     * Set quantityFilms
+     *
+     * @param integer $quantityFilms
+     * @return Discs
+     */
+    public function setQuantityFilms($quantityFilms)
+    {
+        $this->quantityFilms = $quantityFilms;
     
         return $this;
     }
 
     /**
-     * Get quantity
+     * Get quantityFilms
      *
      * @return integer 
      */
-    public function getQuantity()
+    public function getQuantityFilms()
     {
-        return $this->quantity;
+        return $this->quantityFilms;
     }
+
+    /**
+     * Set quantitySeries
+     *
+     * @param integer $quantitySeries
+     * @return Discs
+     */
+    public function setQuantitySeries($quantitySeries)
+    {
+        $this->quantitySeries = $quantitySeries;
+
+        return $this;
+    }
+
+    /**
+     * Get quantitySeries
+     *
+     * @return integer
+     */
+    public function getQuantitySeries()
+    {
+        return $this->quantitySeries;
+    }
+    /**
+     * Set quantityClips
+     *
+     * @param integer $quantityClips
+     * @return Discs
+     */
+    public function setQuantityClips($quantityClips)
+    {
+        $this->quantityClips = $quantityClips;
+
+        return $this;
+    }
+
+    /**
+     * Get quantityClips
+     *
+     * @return integer
+     */
+    public function getQuantityClips()
+    {
+        return $this->quantityClips;
+    }
+
 
     /**
      * Set date
@@ -223,27 +312,28 @@ class Discs
         return $this->date;
     }
 
+
     /**
-     * Set type
+     * Set poster
      *
-     * @param \Cinemax\CinemaxBundle\Entity\Types $type
+     * @param \Application\Sonata\MediaBundle\Entity\Gallery $poster
      * @return Discs
      */
-    public function setType(\Cinemax\CinemaxBundle\Entity\Types $type = null)
+    public function setPoster(\Application\Sonata\MediaBundle\Entity\Gallery $poster = null)
     {
-        $this->type = $type;
+        $this->poster = $poster;
     
         return $this;
     }
 
     /**
-     * Get type
+     * Get poster
      *
-     * @return \Cinemax\CinemaxBundle\Entity\Types 
+     * @return \Application\Sonata\MediaBundle\Entity\Gallery
      */
-    public function getType()
+    public function getPoster()
     {
-        return $this->type;
+        return $this->poster;
     }
 
     /**
@@ -316,29 +406,6 @@ class Discs
     }
 
     /**
-     * Set poster
-     *
-     * @param \Application\Sonata\MediaBundle\Entity\Gallery $poster
-     * @return Discs
-     */
-    public function setPoster(\Application\Sonata\MediaBundle\Entity\Gallery $poster = null)
-    {
-        $this->poster = $poster;
-    
-        return $this;
-    }
-
-    /**
-     * Get poster
-     *
-     * @return \Application\Sonata\MediaBundle\Entity\Gallery
-     */
-    public function getPoster()
-    {
-        return $this->poster;
-    }
-
-    /**
      * Set producer
      *
      * @param \Cinemax\CinemaxBundle\Entity\Producers $producer
@@ -382,5 +449,28 @@ class Discs
     public function getTranslation()
     {
         return $this->translation;
+    }
+
+    /**
+     * Set type
+     *
+     * @param \Cinemax\CinemaxBundle\Entity\Types $type
+     * @return Discs
+     */
+    public function setType(\Cinemax\CinemaxBundle\Entity\Types $type = null)
+    {
+        $this->type = $type;
+    
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return \Cinemax\CinemaxBundle\Entity\Types 
+     */
+    public function getType()
+    {
+        return $this->type;
     }
 }
