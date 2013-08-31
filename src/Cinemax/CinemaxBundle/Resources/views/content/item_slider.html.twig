@@ -9,11 +9,12 @@
                 <li><span>Название диска: </span>{{ disc.name }}</li>
                 <li><span>Страна: </span>{{ disc.country }}</li>
                 <li><span>Формат: </span>{{ disc.format }}</li>
-                <li>{% if disc.type == 'Фильм' %}<span>Количество фильмов: </span>{{ disc.quantityFilms }}{% endif %}</li>
-                <li>{% if disc.type == 'Сериал' %}<span>Количество серий: </span>{{ disc.quantitySeries }}{% endif %}</li>
-                <li>{% if disc.type == 'Клипы' %}<span>Количество клипов: </span>{{ disc.quantityClips }}{% endif %}</li>
+                <li>{% if disc.type == 'фильм' %}<span>Количество фильмов: </span>{{ disc.quantityFilms }}{% endif %}</li>
+                <li>{% if disc.type == 'сериал' %}<span>Количество серий: </span>{{ disc.quantitySeries }}{% endif %}</li>
+                <li>{% if disc.type == 'клип' %}<span>Количество клипов: </span>{{ disc.quantityClips }}{% endif %}</li>
                 <li><span>Производитель: </span>{{ disc.producer }}</li>
                 <li><span>Перевод: </span>{{ disc.translation  }}</li>
+                <li><span>Цена: </span>{{ disc.price }} сомов</li>
             </ul>
         </div>
     </div>
