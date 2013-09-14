@@ -6,12 +6,17 @@
     {% block stylesheets %}
         <link href="{{ asset('public/css/mainframe.css') }} " type="text/css" rel="stylesheet"/>
         <link type="text/css" rel="stylesheet" href="{{ asset("bundles/applicationsonatauser/css/sonata.css") }}"/>
+        {#<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>#}
+        <link type="text/css" rel="stylesheet" href="{{ asset("public/css/jquery-ui.css") }}"/>
     {% endblock %}
     {% block javascripts %}
         <script type="text/javascript" src="{{ asset("public/js/jquery-1.9.1.min.js") }}"></script>
         <script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
         <script type="text/javascript" src="{{ asset("public/js/time.js") }}"></script>
         <script type="text/javascript" src="{{ asset("public/js/animation.js") }}"></script>
+        <script type="text/javascript" src="{{ asset("bundles/cinemax/js/bin.js") }}"></script>
+        <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+        <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
     {% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
 </head>
@@ -123,6 +128,7 @@
     </div>
 
 </header>
+<div id="disc-added" title="Диск добавлен в корзину"></div>
 <hr class="main_hr clearbox">
 {% block body %}
 {% endblock %}

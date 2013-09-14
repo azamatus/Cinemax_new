@@ -5,10 +5,10 @@ namespace Cinemax\CinemaxBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Discs
+ * Cinemax\CinemaxBundle\Entity\Discs
  *
  * @ORM\Table(name="discs")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Cinemax\CinemaxBundle\Entity\DiscsRepository")
  */
 class Discs
 {
@@ -141,6 +141,22 @@ class Discs
      */
     private $type;
 
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="price", type="integer", nullable=true)
+     */
+    private $price;
+
+//    /**
+//     * @var \Prices
+//     *
+//     * @ORM\ManyToOne(targetEntity="Prices")
+//     * @ORM\JoinColumns({
+//     *   @ORM\JoinColumn(name="price", referencedColumnName="id")
+//     * })
+//     */
+//    private $price;
 
 
     /**
@@ -241,6 +257,29 @@ class Discs
     public function getQuantityFilms()
     {
         return $this->quantityFilms;
+    }
+
+    /**
+     * Set price
+     *
+     * @param integer $price
+     * @return Discs
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * Get price
+     *
+     * @return integer
+     */
+    public function getPrice()
+    {
+        return $this->price;
     }
 
     /**
@@ -472,5 +511,10 @@ class Discs
     public function getType()
     {
         return $this->type;
+    }
+
+    public function __toString()
+    {
+        return $this->getName()?$this->getName():"";
     }
 }

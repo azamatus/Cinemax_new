@@ -1,3 +1,7 @@
 cinemax_homepage:
     pattern:  /
     defaults: { _controller: CinemaxBundle:Main:index }
+
+cinemax_bin:
+    resource: "@CinemaxBundle/Resources/config/routing/bin.yml"
+    prefix:   /bin

@@ -75,6 +75,7 @@ class AppKernel extends Kernel
             new Cinemax\CinemaxBundle\CinemaxBundle(),
             new Cinemax\MenuBundle\CinemaxMenuBundle(),
             new Cinemax\HeaderSliderBundle\CinemaxHeaderSliderBundle(),
+            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
