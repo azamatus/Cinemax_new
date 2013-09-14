@@ -5,7 +5,7 @@
 }
 .registration_input input
 {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
     border: 2px solid;
     border-radius: 4px;
     -moz-border-radius: 4px;
@@ -17,10 +17,6 @@
     margin-right: 40px;
     margin-top: 5px;
     padding-left: 10px;
-    opacity: 0.5;
-    -moz-opacity: 0.5;
-    -khtml-opacity: 0.5;
-    filter: alpha(opacity=50);
 }
 .registration_blocks
 {
@@ -48,7 +44,7 @@
     color: red;
 }
 .button_register {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid #FFC974;
     border-radius: 4px;
     -moz-border-radius: 4px;
@@ -57,16 +53,12 @@
     height: 25px;
     margin-right: 40px;
     margin-top: 10px;
-    opacity: 0.5;
-    -moz-opacity: 0.5;
-    -khtml-opacity: 0.5;
-    filter: alpha(opacity=50);
     width: 130px;
     text-transform: uppercase;
 }
 .button_register:hover {
     cursor: pointer;
-    opacity: 1;
+    background-color: rgba(0, 0, 0, 1);
     border: 2px solid #FFC974;
 }
 .button_register:focus
@@ -76,6 +68,12 @@
 .check_email {
     text-align: center;
     font-size: 17px;
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 150px;
+    margin-top: 20px;
+    display: block;
+    width: 800px;
 }
 .log_reg {
     display: inline-block;
@@ -96,7 +94,7 @@
 }
 .user_registration
 {
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid #F9B655;
     border-radius: 5px;
     -moz-border-radius: 5px;
@@ -104,10 +102,6 @@
     -khtml-border-radius: 5px;
     display: inline-block;
     height: 31px;
-    opacity: 0.5;
-    -moz-opacity: 0.5;
-    -khtml-opacity: 0.5;
-    filter: alpha(opacity=50);
     position: relative;
     right: -3%;
     width: 261px;
@@ -181,7 +175,7 @@ a:hover .user_registration_hover {
 }
 .reset_password > input
 {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid;
     border-radius: 4px;
     -moz-border-radius: 4px;
@@ -189,10 +183,6 @@ a:hover .user_registration_hover {
     -khtml-border-radius: 4px;
     height: 30px;
     margin: 5px 40px 5px -10px;
-    opacity: 0.5;
-    -moz-opacity: 0.5;
-    -khtml-opacity: 0.5;
-    filter: alpha(opacity=50);
     padding-left: 10px;
     width: 260px;
 }
@@ -218,7 +208,7 @@ a:hover .user_registration_hover {
     top: 55px;
 }
 .login_password {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
     border: 2px solid;
     border-radius: 4px;
     -moz-border-radius: 4px;
@@ -226,11 +216,6 @@ a:hover .user_registration_hover {
     -khtml-border-radius: 4px;
     height: 30px;
     margin-bottom: 10px;
-
-    opacity: 0.5;
-    -moz-opacity: 0.5;
-    -khtml-opacity: 0.5;
-    filter: alpha(opacity=50);
     padding-left: 10px;
     width: 260px;
 }
@@ -273,11 +258,7 @@ a:hover .user_registration_hover {
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
     -khtml-border-radius: 4px;
-    opacity: 0.6;
-    moz-opacity: 0.6;
-    -khtml-opacity: 0.6;
-    filter: alpha(opacity=60);
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 .for_users_description
 {

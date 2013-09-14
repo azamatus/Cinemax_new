@@ -1,5 +1,9 @@
 {
-    "hash": "31eb165f4dc30a23d149d67996e40bc7",
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "92b59254b72b3dcd81628d174b2ea1b7",
     "packages": [
         {
             "name": "dflydev/markdown",
@@ -591,6 +595,60 @@
                 "CKEditor"
             ],
             "time": "2013-03-18 22:09:28"
+        },
+        {
+            "name": "friendsofsymfony/jsrouting-bundle",
+            "version": "1.2.1",
+            "target-dir": "FOS/JsRoutingBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfSymfony/FOSJsRoutingBundle.git",
+                "reference": "73fd9994ee85e57e778e059c28beb1b963679fa5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSJsRoutingBundle/zipball/73fd9994ee85e57e778e059c28beb1b963679fa5",
+                "reference": "73fd9994ee85e57e778e059c28beb1b963679fa5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/console": "~2.0",
+                "symfony/framework-bundle": "~2.0",
+                "symfony/serializer": "~2.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "FOS\\JsRoutingBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "William Durand",
+                    "email": "william.durand1@gmail.com",
+                    "homepage": "http://www.willdurand.fr"
+                },
+                {
+                    "name": "FriendsOfSymfony Community",
+                    "homepage": "https://github.com/friendsofsymfony/FOSJsRoutingBundle/contributors"
+                }
+            ],
+            "description": "Symfony FOSJsRoutingBundle",
+            "homepage": "http://friendsofsymfony.github.com",
+            "keywords": [
+                "Js Routing"
+            ],
+            "time": "2013-09-10 15:45:38"
         },
         {
             "name": "friendsofsymfony/user-bundle",
@@ -1740,72 +1798,6 @@
             "time": "2013-03-01 11:25:09"
         },
         {
-            "name": "sonata-project/cache-bundle",
-            "version": "2.1.2",
-            "target-dir": "Sonata/CacheBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sonata-project/SonataCacheBundle.git",
-                "reference": "2.1.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataCacheBundle/zipball/2.1.2",
-                "reference": "2.1.2",
-                "shasum": ""
-            },
-            "require": {
-                "symfony/http-foundation": ">=2.1,<2.3-dev",
-                "symfony/process": ">=2.1,<2.3-dev",
-                "symfony/routing": ">=2.1,<2.3-dev",
-                "symfony/security": ">=2.1,<2.3-dev"
-            },
-            "require-dev": {
-                "doctrine/orm": ">=2.2.0"
-            },
-            "suggest": {
-                "doctrine/doctrine-bundle": "ORM support",
-                "doctrine/orm": "ORM support",
-                "doctrine/phpcr-bundle": "PHPCR ODM support",
-                "doctrine/phpcr-odm": "PHPCR ODM support",
-                "ext-apc": "Caching with ext/apc",
-                "ext-memcached": "Caching with ext/memcached"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.0": "2.0.x-dev",
-                    "dev-master": "2.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Sonata\\CacheBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Thomas Rabaix",
-                    "email": "thomas.rabaix@sonata-project.org",
-                    "homepage": "http://sonata-project.org"
-                },
-                {
-                    "name": "Sonata Community",
-                    "homepage": "https://github.com/sonata-project/SonataCacheBundle/contributors"
-                }
-            ],
-            "description": "This bundle provides caching services",
-            "homepage": "https://github.com/sonata-project/SonataCacheBundle",
-            "keywords": [
-                "cache block"
-            ],
-            "time": "2013-03-25 10:22:47"
-        },
-        {
             "name": "sonata-project/doctrine-extensions",
             "version": "1.0.0",
             "source": {
@@ -2517,72 +2509,6 @@
                 "sonata"
             ],
             "time": "2013-02-25 23:40:24"
-        },
-        {
-            "name": "sonata-project/page-bundle",
-            "version": "2.1.x-dev",
-            "target-dir": "Sonata/PageBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sonata-project/SonataPageBundle.git",
-                "reference": "2.1.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataPageBundle/zipball/2.1.1",
-                "reference": "2.1.1",
-                "shasum": ""
-            },
-            "require": {
-                "sonata-project/admin-bundle": "2.1.*@dev",
-                "sonata-project/cache-bundle": "2.1.*",
-                "sonata-project/doctrine-extensions": "1.*",
-                "sonata-project/seo-bundle": "1.*",
-                "symfony-cmf/routing": "1.0.*@dev",
-                "symfony-cmf/routing-extra-bundle": "1.0.*@dev"
-            },
-            "require-dev": {
-                "sonata-project/doctrine-orm-admin-bundle": "2.1.*@dev"
-            },
-            "suggest": {
-                "sonata-project/doctrine-orm-admin-bundle": "2.1.*@dev",
-                "sonata-project/notification-bundle": "2.1.*"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.0": "2.0.x-dev",
-                    "dev-master": "2.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Sonata\\PageBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Thomas Rabaix",
-                    "email": "thomas.rabaix@sonata-project.org",
-                    "homepage": "http://sonata-project.org"
-                },
-                {
-                    "name": "Sonata Community",
-                    "homepage": "https://github.com/sonata-project/SonataPageBundle/contributors"
-                }
-            ],
-            "description": "Symfony SonataPageBundle",
-            "homepage": "http://sonata-project.org/bundles/page",
-            "keywords": [
-                "cms",
-                "page",
-                "sonata"
-            ],
-            "time": "2013-03-20 18:19:36"
         },
         {
             "name": "sonata-project/seo-bundle",
@@ -4108,6 +4034,72 @@
                 "xunit"
             ],
             "time": "2013-01-13 10:24:48"
+        },
+        {
+            "name": "sonata-project/cache-bundle",
+            "version": "2.1.2",
+            "target-dir": "Sonata/CacheBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sonata-project/SonataCacheBundle.git",
+                "reference": "2.1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sonata-project/SonataCacheBundle/zipball/2.1.2",
+                "reference": "2.1.2",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/http-foundation": ">=2.1,<2.3-dev",
+                "symfony/process": ">=2.1,<2.3-dev",
+                "symfony/routing": ">=2.1,<2.3-dev",
+                "symfony/security": ">=2.1,<2.3-dev"
+            },
+            "require-dev": {
+                "doctrine/orm": ">=2.2.0"
+            },
+            "suggest": {
+                "doctrine/doctrine-bundle": "ORM support",
+                "doctrine/orm": "ORM support",
+                "doctrine/phpcr-bundle": "PHPCR ODM support",
+                "doctrine/phpcr-odm": "PHPCR ODM support",
+                "ext-apc": "Caching with ext/apc",
+                "ext-memcached": "Caching with ext/memcached"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.0": "2.0.x-dev",
+                    "dev-master": "2.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Sonata\\CacheBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Rabaix",
+                    "email": "thomas.rabaix@sonata-project.org",
+                    "homepage": "http://sonata-project.org"
+                },
+                {
+                    "name": "Sonata Community",
+                    "homepage": "https://github.com/sonata-project/SonataCacheBundle/contributors"
+                }
+            ],
+            "description": "This bundle provides caching services",
+            "homepage": "https://github.com/sonata-project/SonataCacheBundle",
+            "keywords": [
+                "cache block"
+            ],
+            "time": "2013-03-25 10:22:47"
         }
     ],
     "aliases": [
@@ -4122,7 +4114,6 @@
         "doctrine/data-fixtures": 20,
         "sonata-project/admin-bundle": 20,
         "sonata-project/user-bundle": 20,
-        "sonata-project/page-bundle": 20,
         "sonata-project/media-bundle": 20,
         "sonata-project/news-bundle": 20,
         "sonata-project/doctrine-orm-admin-bundle": 20,
