@@ -5,10 +5,10 @@ namespace Cinemax\CinemaxBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Discs
+ * Cinemax\CinemaxBundle\Entity\Discs
  *
  * @ORM\Table(name="discs")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Cinemax\CinemaxBundle\Entity\DiscsRepository")
  */
 class Discs
 {
@@ -511,5 +511,10 @@ class Discs
     public function getType()
     {
         return $this->type;
+    }
+
+    public function __toString()
+    {
+        return $this->getName()?$this->getName():"";
     }
 }

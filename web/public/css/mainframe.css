@@ -6,7 +6,7 @@
 }
 body {
     background: url("../images/bg.png") repeat scroll center center #000000;
-    border: 1px solid #F2E297;
+    border: 2px solid #F2E297;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -19,6 +19,7 @@ body {
 }
 a, a:hover, a:link, a:visited img {
     text-decoration: none;
+    outline: none;
 }
 .clearbox
 {
@@ -28,7 +29,7 @@ img, div {
 }
 .year {
     float: left;
-    margin: -29px -3px;
+    margin: -30px -4px;
     position: relative;
     z-index: 4;
 }
@@ -122,7 +123,7 @@ img, div {
     clear: right;
     color: #FFE88B;
     float: left;
-    margin: -25px 25px;
+    margin: -25px 10px;
     position: relative;
     text-align: center;
     z-index: 4;
@@ -278,6 +279,14 @@ ul {
     height: 2px;
     background-color: #F2E297;
 }
+@-moz-document url-prefix()
+{
+  .main_hr
+    {
+       position: relative;
+       top: 48px;
+    }
+}
 footer
 {
     margin-top: 70px
@@ -338,4 +347,8 @@ footer
     height: 40px;
     position: absolute;
     margin: 40px 40px;
+}
+.flash-notice {
+    font-size: 20px;
+    font-weight: bold;
 }
