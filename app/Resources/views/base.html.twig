@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8"/>
     <title>{% block title %}Cinemax{% endblock %}</title>
+    <!--[if lt IE 9]>
+        <link href="{{ asset('public/css/if_ie.css') }} " type="text/css" rel="stylesheet"/>
+    <![endif]-->
     {% block stylesheets %}
         <link href="{{ asset('public/css/mainframe.css') }} " type="text/css" rel="stylesheet"/>
         <link type="text/css" rel="stylesheet" href="{{ asset("bundles/applicationsonatauser/css/sonata.css") }}"/>
-        {#<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>#}
         <link type="text/css" rel="stylesheet" href="{{ asset("public/css/jquery-ui.css") }}"/>
     {% endblock %}
     {% block javascripts %}
@@ -19,10 +21,22 @@
         <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
     {% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+
 </head>
 <body>
-
+<!--[if lt IE 9]>
+<div class="if_ie">
+    <img class="if_ie_logo" src="{{ asset('public/images/logo2.png') }}" width="500" height="200" alt="logo"/>
+    <p>Просим прощения за возникшие неполадки.<br>
+        Для корректной работы сайта рекомендуем установить другие браузеры. Например: <a href="http://www.google.com/intl/ru/chrome/">Google Chrome</a>,
+    <a href="http://www.mozilla.org/ru/firefox/new/"> Mozilla Firefox</a>, <a href="http://www.opera.com/computer/windows">Opera</a> или
+    <a href="http://support.apple.com/kb/dl1531">Safari</a>
+    </p>
+</div>
+<![endif]-->
+<div class="body">
 <header>
+
 
     <div class="line"></div>
     <div class="line2"></div>
@@ -48,39 +62,39 @@
     <div id="main-header-menu" class="clearbox">
         <ul>
             <li id="menu_bounce" class="item_margins">
-                <a href="#" id="no_outline">
+                <a href="{{ path('cinemax_all_catalog') }}#catalog" class="no_outline">
                     <span class="menu_catalog menu_margins"></span>
                     <span class="menu_title">КАТАЛОГ</span></a>
             </li>
             <li id="menu_bounce" class="item_margins">
-                <a href="#" id="no_outline">
+                <a href="#" class="no_outline" onclick="popup()">
                     <span class="menu_galery menu_margins"></span>
                     <span class="menu_title">ФОТОГАЛЕРЕЯ</span>
                 </a>
             </li>
             <li id="menu_bounce" class="item_margins">
-                <a href="#" id="no_outline">
+                <a href="#" class="no_outline" onclick="popup()">
                     <span class="menu_trailers menu_margins"></span>
                     <span class="menu_title">ТРЕЙЛЕРЫ</span>
                 </a>
             </li>
             <li id="menu_bounce" class="item_margins">
-                <a href="#" id="no_outline">
+                <a href="{{ path("cinemax_novinki") }}#catalog" class="no_outline">
                     <span class="menu_novinki menu_margins"></span>
                     <span class="menu_title">НОВИНКИ</span>
                 </a>
             </li>
             <li id="menu_bounce" class="item_margins">
-                <a href="#" id="no_outline">
+                <a href="#" class="no_outline" onclick="popup()">
                     <span class="menu_sotrudniki menu_margins"></span>
                     <span class="menu_title">СОТРУДНИКИ</span>
                 </a>
             </li>
             <li id="menu_bounce" class="item_margins">
-                <a href="#" id="no_outline">
+                <a href="#" class="no_outline" onclick="popup()">
                     <span class="menu_about_us menu_margins"></span>
                     <span class="menu_title">О НАС</span>
-        </a>
+                </a>
             </li>
         </ul>
     </div>
@@ -146,5 +160,11 @@
         <div class="footer_logo">
     </div>
 </footer>
+</div>
+<script>
+    function popup(){
+        alert("Данный раздел на разработке!")
+    }
+</script>
 </body>
 </html>

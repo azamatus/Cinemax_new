@@ -34,7 +34,7 @@ class TypesAdmin extends Admin{
     {
         $listmapper
             ->add('id', null, array('label' => 'ID'))
-            ->addIdentifier('name', null, array('label' => 'Жанр'));
+            ->addIdentifier('name', null, array('label' => 'Тип'));
 
     }
 }

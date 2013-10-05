@@ -21,6 +21,7 @@ $(document).ready(function(){
             }
       }
     );
+
     $('#password').bind('focus blur', function(event){
         if(event.type == 'focus'){
             if(this.value == 'password')
@@ -31,4 +32,24 @@ $(document).ready(function(){
             { this.value = 'password';}
         }
     });
- });
+
+        $(".disc").hover(
+
+            function(){
+                $(this).find('.trigger').stop(true,true);
+                $(this).find('.trigger').fadeIn();
+            },
+
+            function(){
+                $(this).find('.trigger').stop(true,true);
+                $(this).find('.trigger').fadeOut();
+            }
+        );
+
+//    Sorting
+        $('.sort_header').click(function(){
+            $(this).next('.layout_sort').toggle("slide");
+        });
+
+});
+
