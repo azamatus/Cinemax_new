@@ -42,6 +42,7 @@
         "sonata-project/notification-bundle": "2.1.*",
         "sonata-project/admin-bundle": "2.1.*@dev",
         "sonata-project/block-bundle": "2.1.*",
+        "sonata-project/cache-bundle": "dev-master",
         "sonata-project/user-bundle": "2.1.*@dev",
         "sonata-project/media-bundle": "2.1.*@dev",
         "sonata-project/news-bundle": "2.1.*@dev",
@@ -57,7 +58,8 @@
         "willdurand/faker-bundle": "dev-master",
 
         "kriswallsmith/assetic": "1.1.*@dev",
-        "friendsofsymfony/jsrouting-bundle": "~1.1"
+        "friendsofsymfony/jsrouting-bundle": "~1.1",
+        "knplabs/knp-paginator-bundle": "dev-master"
     },
 
     "require-dev": {

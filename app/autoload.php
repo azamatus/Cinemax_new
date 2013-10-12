@@ -16,6 +16,11 @@ if (!function_exists('intl_get_error_code')) {
     require_once __DIR__.'/../vendor/symfony/symfony/src/Symfony/Component/Locale/Resources/stubs/functions.php';
 
     $loader->add('', __DIR__.'/../vendor/symfony/symfony/src/Symfony/Component/Locale/Resources/stubs');
+    $loader->add('FOS',__DIR__.'/../vendor/bundles');
+    $loader->add('Sonata',__DIR__);
+    $loader->add('Knp\\Component',__DIR__.'/../vendor/knp-components/src');
+    $loader->add('Knp\\Bundle',__DIR__.'/../vendor/bundles');
 }
-$loader->add('FOS',__DIR__.'/../vendor/bundles');
+
+
 AnnotationRegistry::registerLoader(array($loader, 'loadClass'));

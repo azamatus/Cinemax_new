@@ -3,7 +3,7 @@
     <div id="left_header_menu">
         <ul>
             <li class="item_menu">
-                <a href="#">
+                <a href="{{ path("cinemax_novinki") }}#catalog">
                     <div class="menu_border"></div>
                     <div class="menu_image_hover"></div>
                     <div class="item_menu_line"></div>
@@ -11,15 +11,15 @@
                 </a>
             </li>
             <li class="item_menu item_margin_cat">
-                <a href="#">
+                <a href="{{ path('cinemax_all_catalog') }}#catalog">
                     <div class="menu_border"></div>
                     <div class="menu_image_hover"></div>
                     <div class="item_menu_line"></div>
-                    <span>КАТАЛОГ</span>
+                    <span>КАТАЛОГ ДИСКОВ</span>
                 </a>
             </li>
             <li class="item_menu item_margin_tr">
-                <a href="#">
+                <a href="#"  onclick="popup()">
                     <div class="menu_border"></div>
                     <div class="menu_image_hover"></div>
                     <div class="item_menu_line"></div>
@@ -27,7 +27,7 @@
                 </a>
             </li>
             <li class="item_menu item_margin_st_ct">
-                <a href="#">
+                <a href="#" onclick="popup()">
                     <div class="menu_border"></div>
                     <div class="menu_image_hover"></div>
                     <div class="item_menu_line"></div>
@@ -35,7 +35,7 @@
                 </a>
             </li>
             <li class="item_menu item_margin_st_ct">
-                <a href="#">
+                <a href="#" onclick="popup()">
                     <div class="menu_border"></div>
                     <div class="menu_image_hover"></div>
                     <div class="item_menu_line"></div>
@@ -43,7 +43,7 @@
                 </a>
             </li>
             <li class="item_menu item_margin_vd">
-                <a href="#">
+                <a href="#" onclick="popup()">
                     <div class="menu_border"></div>
                     <div class="menu_image_hover"></div>
                     <div class="item_menu_line item_menu_vd_line"></div>
@@ -51,7 +51,7 @@
                 </a>
             </li>
             <li class="item_menu item_margin_ms">
-                <a href="#">
+                <a href="#" onclick="popup()">
                     <div class="menu_border"></div>
                     <div class="menu_image_hover"></div>
                     <div class="item_menu_line"></div>
@@ -59,7 +59,7 @@
                 </a>
             </li>
             <li class="item_menu item_margin_fg">
-                <a href="#">
+                <a href="#" onclick="popup()">
                     <div class="menu_border"></div>
                     <div class="menu_image_hover"></div>
                     <div class="item_menu_line"></div>
@@ -67,7 +67,7 @@
                 </a>
             </li>
             <li class="item_menu item_margin_of">
-                <a href="#">
+                <a href="#" onclick="popup()">
                     <div class="menu_border"></div>
                     <div class="menu_image_hover"></div>
                     <div class="item_menu_line"></div>
@@ -80,6 +80,10 @@
         <span>СКОРО В КИНО!!!</span><br>
             {% render "CinemaxHeaderSliderBundle:Slider:getSlider" %}
     </div>
-
+<script>
+    function popup(){
+        alert('Данный раздел на разработке!');
+    }
+</script>
 
 
