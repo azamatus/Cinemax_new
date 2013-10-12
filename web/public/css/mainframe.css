@@ -47,7 +47,7 @@ img, div {
     width: 725px;
 }
 .header_picture {
-    background: url("../images/bullets.png") no-repeat scroll 0 0%, url("../images/header_picture1.png") no-repeat;
+    background: url("../images/bullets.png") no-repeat scroll 0 0, url("../images/header_picture1.png") no-repeat;
     float: right;
     height: 427px;
     margin: -35px -20px;
@@ -157,7 +157,7 @@ img, div {
 {
     outline: none;
 }
-#no_outline
+.no_outline
 {
     outline: none;
 }
@@ -279,7 +279,7 @@ ul {
     height: 2px;
     background-color: #F2E297;
 }
-@-moz-document url-prefix()
+@-moz-document url-prefix()/*Firefox*/
 {
   .main_hr
     {

@@ -67,8 +67,6 @@ class AppKernel extends Kernel
             // CMF Integration
             new Symfony\Cmf\Bundle\RoutingExtraBundle\SymfonyCmfRoutingExtraBundle(),
 
-            // DEMO
-            new Sonata\Bundle\DemoBundle\SonataDemoBundle(),
 
             // Enable this if you want to audit backend action
             new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),
@@ -76,6 +74,7 @@ class AppKernel extends Kernel
             new Cinemax\MenuBundle\CinemaxMenuBundle(),
             new Cinemax\HeaderSliderBundle\CinemaxHeaderSliderBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

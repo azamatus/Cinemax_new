@@ -1,22 +1,10 @@
 {% if disc.active == 1 %}
 <div class="disc float_left">
-    <a href="#"> {% media  disc.poster, 'big' with {'class': 'poster'}%}<br>
-        <span>{{ disc.name }}</span></a>
-    <a href="#"> {% media  disc.poster, 'big' with {'class': 'poster'}%}<br>
-        <span>{{ disc.name }}</span></a>
-    <a href="#"> {% media  disc.poster, 'big' with {'class': 'poster'}%}<br>
-        <span>{{ disc.name }}</span></a>
-    <a href="#"> {% media  disc.poster, 'big' with {'class': 'poster'}%}<br>
-        <span>{{ disc.name }}</span></a>
-    <a href="#"> {% media  disc.poster, 'big' with {'class': 'poster'}%}<br>
-        <span>{{ disc.name }}</span></a>
-    <a href="#"> {% media  disc.poster, 'big' with {'class': 'poster'}%}<br>
-        <span>{{ disc.name }}</span></a>
-    <a href="#"> {% media  disc.poster, 'big' with {'class': 'poster'}%}<br>
-        <span>{{ disc.name }}</span></a>
-    <a href="#"> {% media  disc.poster, 'big' with {'class': 'poster'}%}<br>
-        <span>{{ disc.name }}</span></a>
+    <a href="#" class='disc_poster'> {% media  disc.poster, 'big' with {'class': 'poster'}%}<br>
+    <span>{{ disc.name }}</span></a>
+    <div class="trigger" id="{{ disc.id }}">
+        <div class="disc_body"><a class="korzina" href="{{ path('cinemax_bin_ajax_add_disc', {'id':disc.id }) }}" onclick="return false;"><span>Заказать</span></a></div>
+    </div>
 </div>
 {% endif %}
-
 

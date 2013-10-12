@@ -10,16 +10,17 @@
 namespace Cinemax\CinemaxBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Cinemax\CinemaxBundle\Entity;
 
 class ContentController  extends Controller{
 
     public function getCatalogAction()
     {
-        $discs = $this ->getDoctrine()
-            ->getRepository("CinemaxBundle:Discs")
-            ->findAll();
+        $repository = $this ->getDoctrine()
+            ->getRepository("CinemaxBundle:Discs");
 
-        return $this->render('CinemaxBundle:content:catalog.html.twig', array('discs' => $discs));
+        $newdiscs = $repository-> getLastUpdatedDiscs();
+        return $this->render('CinemaxBundle:content:catalog.html.twig', array('discs' => $newdiscs));
     }
 
     public function getSliderAction()
@@ -28,7 +29,53 @@ class ContentController  extends Controller{
         $discs = $this -> getDoctrine()
             ->getRepository("CinemaxBundle:Discs")
             ->findAll();
-
         return $this->render('CinemaxBundle:content:get_slider.html.twig', array('discs' => $discs));
     }
+
+    public function getAllCatalogAction(){
+
+        $discs = $this -> getDoctrine()
+            ->getRepository("CinemaxBundle:Discs")
+            ->findAll();
+
+        $paginator = $this -> get('knp_paginator');
+
+        $pagination = $paginator
+            ->paginate($discs, $this->get('request')->query->get('page',1),12);
+
+
+        return $this -> render('CinemaxBundle:content:allCatalog.html.twig',array('pagination' => $pagination, 'title' => 'Весь каталог'));
+
+    }
+
+    public function sortByTypeAction($type)
+    {
+        $repository = $this -> getDoctrine()
+               ->getRepository("CinemaxBundle:Discs");
+
+        $sortedDiscs = $repository -> doSort($type);
+
+        $paginator = $this -> get('knp_paginator');
+
+        $pagination = $paginator
+            ->paginate($sortedDiscs, $this->get('request')->query->get('page',1),12);
+        return $this->render("CinemaxBundle:content:allCatalog.html.twig", array('pagination' => $pagination));
+    }
+
+    public function getNoveltiesAction()
+    {
+        $repository = $this -> getDoctrine()
+            ->getRepository("CinemaxBundle:Discs");
+
+        $novelties = $repository->getLastUpdatedDiscs();
+
+        $paginator = $this -> get('knp_paginator');
+        $pagination = $paginator
+            ->paginate($novelties, $this->get('request')->query->get('page',1),12);
+
+
+        return $this->render('CinemaxBundle:content:allCatalog.html.twig', array('pagination' => $pagination, 'title' => 'Новинки'));
+
+    }
+
 }

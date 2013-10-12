@@ -3,6 +3,7 @@
 namespace Cinemax\MenuBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Cinemax\CinemaxBundle\Entity;
 
 class MenuController extends Controller
 {
