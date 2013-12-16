@@ -27,8 +27,8 @@ $(document).ready(function () {
                             width: 265,
                             show: 'fadeIn',
                             hide: 'fadeOut',
-                            position: 'center',
-                            draggable: false
+                            draggable: true
+
                         }
                     );
                 refreshWidget();

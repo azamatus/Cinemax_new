@@ -59,7 +59,7 @@ class ContentController  extends Controller{
 
         $pagination = $paginator
             ->paginate($sortedDiscs, $this->get('request')->query->get('page',1),12);
-        return $this->render("CinemaxBundle:content:allCatalog.html.twig", array('pagination' => $pagination));
+        return $this->render("CinemaxBundle:content:allCatalog.html.twig", array('pagination' => $pagination, 'title' => 'Весь каталог'));
     }
 
     public function getNoveltiesAction()

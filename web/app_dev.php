@@ -14,7 +14,7 @@ require_once __DIR__.'/../app/bootstrap.php.cache';
 require_once __DIR__.'/../app/AppKernel.php';
 
 $kernel = new AppKernel('dev', true);
-$kernel->loadClassCache();
+//$kernel->loadClassCache();
 
 // if you want to use the SonataPageBundle with multisite
 // using different relative paths, you must change the request
