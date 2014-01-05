@@ -32,7 +32,7 @@ class DiscsRepository extends EntityRepository{
         $repostory = $em ->getRepository("CinemaxBundle:Discs");
         $qb = $repostory ->createQueryBuilder('n')
             ->orderBy('n.date','DESC')
-            ->setMaxResults(16)
+            ->setMaxResults(32)
             ->getQuery();
 
         return $qb->getResult();

@@ -86,8 +86,6 @@ class Discs
      */
     private $poster;
 
-
-
     /**
      * @var \Countries
      *
