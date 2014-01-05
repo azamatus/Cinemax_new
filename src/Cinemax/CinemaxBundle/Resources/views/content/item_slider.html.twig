@@ -1,6 +1,7 @@
 {% if disc.active == 1 %}
 <div class="description">
-    <a href="#" class="float_left">{% thumbnail  disc.poster, 'big' with {'class' : 'slider_disc'}%}</a>
+    {#<a href="#" class="float_left">{% thumbnail  disc.poster, 'big' with {'class' : 'slider_disc'}%}</a>#}
+    <a href="#" class="float_left slider_disc">{{ disc.poster|galleryThumb('posters_small') }}</a>
     <div class="opacity"></div>
     <div class="slider_description">
         <span>Описание диска</span>

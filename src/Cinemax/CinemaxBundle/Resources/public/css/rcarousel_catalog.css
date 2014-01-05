@@ -39,7 +39,7 @@
 {
     outline: none;
 }
-.slider_disc
+.slider_disc img
 {
     width: 445px!important;
     height: 345px!important;
@@ -95,7 +95,11 @@
 {
     margin: 20px -15px 40px;
 }
-
+.disc_desc ul li:nth-child(2)
+{
+    width: 360px;
+    margin-left: 0px;
+}
 .disc_desc ul li span
 {
     color: #ffffff;

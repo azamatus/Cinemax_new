@@ -44,8 +44,13 @@
     margin-bottom: 10px;
 }
 
-.poster
-{
+/*.poster*/
+/*{*/
+    /*width: 225px;*/
+    /*height: 175px;*/
+    /*border: 2px solid #ffee9f;*/
+/*}*/
+.disc_poster  img{
     width: 225px;
     height: 175px;
     border: 2px solid #ffee9f;
