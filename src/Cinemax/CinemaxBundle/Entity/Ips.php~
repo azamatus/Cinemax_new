@@ -1,0 +1,32 @@
+<?php
+
+namespace Cinemax\CinemaxBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Ips
+ *
+ * @ORM\Table(name="ips")
+ * @ORM\Entity
+ */
+class Ips
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ip_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $ipId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ip_address", type="string", length=50, nullable=false)
+     */
+    private $ipAddress;
+
+
+}
