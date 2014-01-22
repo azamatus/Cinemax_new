@@ -1,18 +1,11 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: Aza
- * Date: 12.06.13
- * Time: 15:03
- * To change this template use File | Settings | File Templates.
- */
 
 namespace Cinemax\CinemaxBundle\Controller;
 
+use Cinemax\CinemaxBundle\Entity;
 use Cinemax\CinemaxBundle\Entity\Ips;
 use Cinemax\CinemaxBundle\Entity\Visits;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Cinemax\CinemaxBundle\Entity;
 
 class ContentController  extends Controller{
 
@@ -22,7 +15,7 @@ class ContentController  extends Controller{
             ->getRepository("CinemaxBundle:Discs");
 
         $newdiscs = $repository-> getLastUpdatedDiscs();
-        return $this->render('CinemaxBundle:content:catalog.html.twig', array('discs' => $newdiscs));
+        return $this->render('CinemaxBundle:Content:catalog.html.twig', array('discs' => $newdiscs));
     }
 
     public function getSliderAction()
@@ -31,7 +24,7 @@ class ContentController  extends Controller{
         $discs = $this -> getDoctrine()
             ->getRepository("CinemaxBundle:Discs")
             ->findAll();
-        return $this->render('CinemaxBundle:content:get_slider.html.twig', array('discs' => $discs));
+        return $this->render('CinemaxBundle:Content:get_slider.html.twig', array('discs' => $discs));
     }
 
     public function getAllCatalogAction(){
@@ -63,7 +56,6 @@ class ContentController  extends Controller{
                 $ips -> setIpAddress($visitor_ip);
                 $visits_repo -> updateHosts($date);
                 $em->persist($ips);
-                //$em->persist($visits);
                 $em->flush();
             }
         }
@@ -77,7 +69,7 @@ class ContentController  extends Controller{
             ->paginate($discs, $this->get('request')->query->get('page',1),12);
 
 
-        return $this -> render('CinemaxBundle:content:allCatalog.html.twig',array('pagination' => $pagination, 'title' => 'Весь каталог'));
+        return $this -> render('CinemaxBundle:Content:allCatalog.html.twig',array('pagination' => $pagination, 'title' => 'Весь каталог'));
 
     }
 
@@ -92,7 +84,7 @@ class ContentController  extends Controller{
 
         $pagination = $paginator
             ->paginate($sortedDiscs, $this->get('request')->query->get('page',1),12);
-        return $this->render("CinemaxBundle:content:allCatalog.html.twig", array('pagination' => $pagination, 'title' => 'Весь каталог'));
+        return $this->render("CinemaxBundle:Content:allCatalog.html.twig", array('pagination' => $pagination, 'title' => 'Весь каталог'));
     }
 
     public function getNoveltiesAction()
@@ -124,7 +116,6 @@ class ContentController  extends Controller{
                 $ips -> setIpAddress($visitor_ip);
                 $visits_repo -> updateHosts($date);
                 $em->persist($ips);
-                //$em->persist($visits);
                 $em->flush();
             }
         }
@@ -138,7 +129,7 @@ class ContentController  extends Controller{
             ->paginate($novelties, $this->get('request')->query->get('page',1),12);
 
 
-        return $this->render('CinemaxBundle:content:allCatalog.html.twig', array('pagination' => $pagination, 'title' => 'Новинки'));
+        return $this->render('CinemaxBundle:Content:allCatalog.html.twig', array('pagination' => $pagination, 'title' => 'Новинки'));
 
     }
 
