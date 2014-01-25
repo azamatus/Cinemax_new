@@ -29,7 +29,7 @@ class DiscInfoAdmin extends Admin{
     {
         $listmapper
             ->addIdentifier('id',null, array('label'=>'id'))
-            ->add('content',null, array('label'=> 'Информация'));
+            ->addIdentifier('disc',null,array('label'=>'Название диска'));
     }
     protected function configureFormFields(FormMapper $formmapper)
     {
