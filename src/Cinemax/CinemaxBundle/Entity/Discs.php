@@ -163,6 +163,13 @@ class Discs
 //     */
 //    private $price;
 
+    /**
+     * @var DiscInfo
+     *
+     * @ORM\OneToMany(targetEntity="Cinemax\CinemaxBundle\Entity\DiscInfo", mappedBy="disc")
+     */
+    private $details;
+
 
     /**
      * Get id
@@ -521,5 +528,38 @@ class Discs
     public function __toString()
     {
         return $this->getName()?$this->getName():"";
+    }
+
+    /**
+     * Add details
+     *
+     * @param \Cinemax\CinemaxBundle\Entity\DiscInfo $details
+     * @return Discs
+     */
+    public function addDetail(\Cinemax\CinemaxBundle\Entity\DiscInfo $details)
+    {
+        $this->details[] = $details;
+    
+        return $this;
+    }
+
+    /**
+     * Remove details
+     *
+     * @param \Cinemax\CinemaxBundle\Entity\DiscInfo $details
+     */
+    public function removeDetail(\Cinemax\CinemaxBundle\Entity\DiscInfo $details)
+    {
+        $this->details->removeElement($details);
+    }
+
+    /**
+     * Get details
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getDetails()
+    {
+        return $this->details;
     }
 }

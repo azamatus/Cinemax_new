@@ -92,6 +92,20 @@
     top: -210px;
     right: -2px;
 }
+.disc_body .korzina{
+    position: relative;
+    top: -15px;
+}
+.details{
+    margin: 0!important;
+    position: relative;
+    top: -65px;
+    left: 22px;
+    display: inline!important;
+}
+.details span{
+    display: inline!important;
+}
 @-moz-document url-prefix()/*Firefox*/
 {
     .disc_body
@@ -216,4 +230,58 @@
 .fs18px
 {
     font-size: 18px;
+}
+.disc_info{
+    position: relative;
+    top: 70px;
+    width: 960px;
+    background-color: rgba(3, 3, 3, 0.6);
+    border: 2px solid;
+    padding: 10px 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.disc_info p span{
+    font-family: Calibri!important;
+    font-size: 16px!important;
+}
+
+.disc_info .korzina{
+    margin: 10px 10px;
+}
+.disc_info  .korzina p, .disc_info_to_bin p{
+    color: red;
+    text-transform: uppercase;
+    font-size: 17px;
+    margin-left: 35px;
+    margin-top: 5px;
+}
+.disc_info_to_bin{
+    float: right;
+    position: relative;
+    top: 15px;
+}
+.disc_info > span{
+    text-align: center;
+    display: block;
+    font-size: 35px;
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.disc_info_content strong{
+   word-break: break-all;
+   color: red;
+    font-size: 18px;
+}
+.disc_info .disc_info_image{
+    float: left;
+    margin-right: 15px;
+}
+.disc_info img{
+    width: 400px;
+    height: auto;
+    border: 2px solid;
 }

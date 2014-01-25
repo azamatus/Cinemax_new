@@ -17,3 +17,7 @@ cinemax_sort_by_type:
 cinemax_novinki:
     pattern: /novelties/
     defaults: { _controller: CinemaxBundle:Content:getNovelties }
+
+cinemax_disc_info:
+    pattern: /disc/{id}/
+    defaults: { _controller: CinemaxBundle:Content:getInfo }
