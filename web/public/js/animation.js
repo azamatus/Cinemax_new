@@ -51,5 +51,13 @@ $(document).ready(function(){
             $(this).next('.layout_sort').toggle("slide");
         });
 
+        $("#zoom").elevateZoom({
+            zoomWindowFadeIn: 500,
+            zoomWindowFadeOut: 500,
+            lensFadeIn: 500,
+            lensFadeOut: 500,
+            easing : true
+        });
+
 });
 

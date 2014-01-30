@@ -27,8 +27,8 @@ sonata_media:
             providers:
                 - sonata.media.provider.image
             formats:
-                small: { width: 235, height: 185, quality: 100}
-                big:   { width: 900, height: 700, quality: 100}
+                small: { width: 455, height: 390, quality: 70 }
+                big:   { width: 900, height: 700, quality: 100 }
     cdn:
         # define the public base url for the uploaded media
         server:

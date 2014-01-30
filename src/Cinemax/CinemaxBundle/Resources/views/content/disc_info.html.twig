@@ -4,11 +4,17 @@
     <link href="{{ asset('bundles/cinemax/css/catalog.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ asset('bundles/cinemax/css/rcarousel_catalog.css') }}" type="text/css" rel="stylesheet">
 {% endblock %}
+
 {% block body %}
     <div class="disc_info">
         <a name="info"></a>
         <span>{{ disc.name }}</span>
-        <div class="disc_info_image"> {{ disc.poster|galleryThumb('posters_small') }}</div>
+        <div class="disc_info_image">
+            {#{{ disc.poster|galleryThumb('posters_big') }}#}
+            {% for galleryHasMedia in disc.poster.GalleryHasMedias %}
+                <img id="zoom" src="{% path galleryHasMedia.media, 'posters_small' %}" data-zoom-image="{% path galleryHasMedia.media, 'posters_big' %}" />
+            {% endfor %}
+        </div>
         {% for info in disc.details %}
                 <div class="disc_info_content">{{ info.content|raw }}</div>
         {% endfor %}
