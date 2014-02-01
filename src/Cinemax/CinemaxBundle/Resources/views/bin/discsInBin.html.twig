@@ -28,7 +28,10 @@
                 {% set totalPrice = totalPrice + disc.price * attribute(discsCount,disc.id)  %}
                  <tr id="{{ disc.id }}" class="bin_disc">
                     <td>
-                        {% media disc.poster, 'big' with {'class':'in_bin_poster'} %}
+                        {#{% media disc.poster, 'big' with {'class':'in_bin_poster'} %}#}
+                        {% for galleryHasMedia in disc.poster.GalleryHasMedias %}
+                        <img class="in_bin_poster" src="{% path galleryHasMedia.media, 'posters_small' %}" />
+                        {% endfor %}
                         <div class="disc_info">
                         <span>{{ disc.name }}</span><br>
                         <span>{{ disc.format }}</span><br>
