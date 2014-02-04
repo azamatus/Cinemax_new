@@ -242,34 +242,16 @@ ul {
 }
 .reklama
 {
-    position: relative;
-}
-.banner
-{
-    border: 1px solid #ffba57;
     float: right;
-    width: 271px;
-    height: 145px;
     position: relative;
-    background-color: #856224;
-    opacity: 0.5;
+    top: 120px;
+    right: 55px;
+}
+.reklama img{
+    border: 2px solid;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-    right: 55px;
-    top: 90px;
-}
-.reklama > span
-{
-    display: block;
-    position: relative;
-    top: -25px;
-    color: #ffffff;
-    font-size: 27px;
-    width: 270px;
-    float: right;
-    text-align: center;
-    right: 55px;
 }
 .main_hr
 {
