@@ -1,1 +1,54 @@
-Заказ
+<h1>Новый заказ</h1>
+Ф.И.О : {{ binclient.fio }}<br/>
+Телефон: {{ binclient.phone }}<br/>
+Email: {{ binclient.email }}<br/>
+Адрес: {{ binclient.address }}<br/>
+Дата доставки: {{ binclient.dateOrder|date('Y-m-d') }}<br/>
+{#<table>#}
+    {#<tr>#}
+        {#<th>Товар:</th>#}
+        {#<th>Цена:</th>#}
+        {#<th>Кол-во:</th>#}
+        {#<th>Итого:</th>#}
+    {#</tr>#}
+    {#{% set totalPrice = 0%}#}
+    {#{% for order in orders %}#}
+        {#{% set good = order.good %}#}
+        {#{% set totalPrice = totalPrice + good.price * order.amount %}#}
+        {#<tr id="{{ good.id }}">#}
+            {#<td>#}
+                {#<div>#}
+                    {#<a class="name" href="{{ url('nurix_goods_get_info', {'id': good.id} ) }}">{{ good.name }}</a>#}
+
+                    {#<div class="from">{{ good.shortDescription }}</div>#}
+                {#</div>#}
+            {#</td>#}
+            {#<td>#}
+                {#<div class="Som">{{ good.price|price('KGS') }}</div>#}
+                {#<div class="Dollar">{{ good.price|price('USD') }}</div>#}
+            {#</td>#}
+            {#<td>#}
+                {#<div class="bin_itemCount">{{ order.amount }}</div>#}
+            {#</td>#}
+            {#<td>#}
+                {#<div class="bin_itemPrice" id="goodTotal_{{ good.id }}">#}
+                    {#<div class="Som">{{ (good.price * count)|price('KGS') }}</div>#}
+                    {#<div class="Dollar">{{ (good.price * count)|price('USD') }}</div>#}
+                {#</div>#}
+            {#</td>#}
+        {#</tr>#}
+    {#{% endfor %}#}
+    {#<tr class="stop-count">#}
+        {#<td>#}
+            {#<div class="itog">Итого:</div>#}
+        {#</td>#}
+        {#<td></td>#}
+        {#<td></td>#}
+        {#<td>#}
+            {#<div class="bin_itemTotalPrice">#}
+                {#<div class="Som">{{ totalPrice|price('KGS') }}</div>#}
+                {#<div class="Dollar">{{ totalPrice|price('USD') }}</div>#}
+            {#</div>#}
+        {#</td>#}
+    {#</tr>#}
+{#</table>#}
