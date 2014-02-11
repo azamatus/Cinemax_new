@@ -23,6 +23,11 @@
     position: relative;
     left: 15%;
 }
+.registration_block > p{
+    text-align: center ;
+    font-size: 20px;
+    font-weight: bold;
+}
 .registration_label
 {
     float: left;

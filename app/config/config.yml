@@ -98,7 +98,7 @@ fos_user:
         form:
             type: sonata_user_registration
         confirmation:
-            enabled:    true
+            enabled:    false
     from_email:
         address:        azamatkurmanbekov@gmail.com
         sender_name:    Acme Demo App

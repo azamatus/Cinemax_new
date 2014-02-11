@@ -112,6 +112,7 @@ class BinController extends Controller{
         }
         return $response;
     }
+
     public function binOrderAction(Request $request)
     {
         /* @var User $user */
@@ -198,12 +199,14 @@ class BinController extends Controller{
             ->setTo('azamatkurmanbekov@gmail.com')
             ->setBody(
                 $this->get('templating')->render(
-                    'CinemaxBundle:Bin:email.txt.twig',
+                    'CinemaxBundle:bin:email.txt.twig',
                     array('binclient' => $binClients,'orders' => $orders)
                 )
             )
             ->setContentType("text/html")
         ;
+        var_dump($message);
+        die;
         $this->get('mailer')->send($message);
 }
 }
