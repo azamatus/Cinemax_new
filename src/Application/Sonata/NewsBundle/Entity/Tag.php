@@ -20,7 +20,7 @@ use Sonata\NewsBundle\Entity\BaseTag as BaseTag;
  *
  * @author <yourname> <youremail>
  */
-class Tag extends BaseTag
+class Tag
 {
 
     /**

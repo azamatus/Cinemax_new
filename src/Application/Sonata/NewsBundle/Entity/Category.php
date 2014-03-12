@@ -20,7 +20,7 @@ use Sonata\NewsBundle\Entity\BaseCategory as BaseCategory;
  *
  * @author <yourname> <youremail>
  */
-class Category extends BaseCategory
+class Category
 {
 
     /**

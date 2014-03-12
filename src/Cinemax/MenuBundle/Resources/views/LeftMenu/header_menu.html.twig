@@ -51,11 +51,11 @@
                 </a>
             </li>
             <li class="item_menu item_margin_ms">
-                <a href="javascript:void(0)" onclick="popup()">
+                <a href="{{ path("cinemax_feedback") }}#feedback">
                     <div class="menu_border"></div>
                     <div class="menu_image_hover"></div>
                     <div class="item_menu_line"></div>
-                    <span>МУЗЫКА</span>
+                    <span>ОБРАТНАЯ СВЯЗЬ</span>
                 </a>
             </li>
             <li class="item_menu item_margin_fg">
@@ -78,7 +78,7 @@
     </div>
     <div id="mid_picture">
         <span>СКОРО В КИНО!!!</span><br>
-            {% render "CinemaxHeaderSliderBundle:Slider:getSlider" %}
+            {% render controller("CinemaxHeaderSliderBundle:Slider:getSlider") %}
     </div>
 <script>
     function popup(){

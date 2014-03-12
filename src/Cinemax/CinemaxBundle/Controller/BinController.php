@@ -136,7 +136,7 @@ class BinController extends Controller{
         $form = $this->createForm(new BinClientsFormType(), $binClients);
 
         if ($request->isMethod("POST")){
-            $form->bind($request);
+            $form->handleRequest($request);
             if ($form->isValid()){
                 $em = $this->getDoctrine()->getManager();
                 $binClients->setDateOrder(new \DateTime());
@@ -158,7 +158,7 @@ class BinController extends Controller{
                 }
                 $this->sendEmail($binClients);
                 $this->ClearCookies($discsIds);
-                $this->get('session')->setFlash('notice', 'Ваш заказ принят');
+                $this->get('session')->getFlashBag()->add('notice', 'Ваш заказ принят');
             }
         }
         return $this->render("CinemaxBundle:bin:binOrderForm.html.twig", array("form" => $form->createView()));
@@ -205,8 +205,6 @@ class BinController extends Controller{
             )
             ->setContentType("text/html")
         ;
-        var_dump($message);
-        die;
         $this->get('mailer')->send($message);
 }
 }

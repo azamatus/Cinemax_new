@@ -9,12 +9,12 @@
 
 {% block body %}
 <div class="catalog_slider">
-    {% render "CinemaxBundle:Content:getSlider" %}
+    {% render controller("CinemaxBundle:Content:getSlider") %}
 </div>
     <span class="last_update">Последние обновления</span>
 <div class="content">
     <div class="catalog">
-        {% render "CinemaxBundle:Content:getCatalog" %}
+        {% render controller("CinemaxBundle:Content:getCatalog") %}
     </div>
 </div>
 {% endblock %}

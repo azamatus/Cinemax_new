@@ -1,7 +1,6 @@
 * {
     color: #FFC974;
     font-family: Calibri;
-    font-size: 16px;
     margin: 0 auto;
 }
 body {
@@ -271,7 +270,7 @@ ul {
 }
 footer
 {
-    margin-top: 70px
+    margin-top: 90px
 }
 .phones
 {
@@ -333,4 +332,20 @@ footer
 .flash-notice {
     font-size: 20px;
     font-weight: bold;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #FFC974;
+    text-transform: uppercase;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #FFC974;
+    text-transform: uppercase;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #FFC974;
+    text-transform: uppercase;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #FFC974;
+    text-transform: uppercase;
 }

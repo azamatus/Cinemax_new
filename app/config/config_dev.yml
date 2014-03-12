@@ -26,3 +26,8 @@ assetic:
 
 bazinga_faker:
     orm: doctrine
+
+swiftmailer:
+    transport: gmail
+    username:  azamatkurmanbekov@gmail.com
+    password:  090492manas

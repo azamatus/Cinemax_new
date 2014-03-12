@@ -18,6 +18,7 @@
         <script type="text/javascript" src="{{ asset("public/js/jquery.elevatezoom.js") }}"></script>
         <script type="text/javascript" src="{{ asset("public/js/animation.js") }}"></script>
         <script type="text/javascript" src="{{ asset("bundles/cinemax/js/bin.js") }}"></script>
+        <script type="text/javascript" src="{{ asset("public/js/jquery.validate.min.js") }}"></script>
         <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
         <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
         <script>
@@ -52,7 +53,7 @@
     <div class="float_left">
         <div class="header_logo"><a href="{{ path("cinemax_homepage") }}"><img class="logo" src="{{ asset('public/images/logo.png') }}" alt="logo"/></a></div>
         <div class="logo_shadow"></div>
-        <span class="header_title clearbox">ПЕРВЫЙ ОФФИЦИАЛЬНЫЙ САЙТ<br>ПРОИЗВОДСТВА КОМПАКТ-ДИСКОВ</span>
+        <span class="header_title clearbox">ПЕРВЫЙ ОФИЦИАЛЬНЫЙ САЙТ<br>ПРОИЗВОДСТВА КОМПАКТ-ДИСКОВ</span>
     </div>
     <div class="header_picture"></div>
     <div class="pipe clearbox"></div>
@@ -115,7 +116,7 @@
     </div>
     <div>
         {% block menu %}
-            {% render("CinemaxMenuBundle:Menu:index") %}
+            {% render controller("CinemaxMenuBundle:Menu:index") %}
         {% endblock %}
         {% block login %}
             <div class="log_reg">
@@ -139,7 +140,7 @@
                     <span class="reg_strelka"></span>
                 </a>
                     <div class="forgot_password"><a href="{{ path('fos_user_resetting_request') }}">ЗАБЫЛИ ПАРОЛЬ?</a></div>
-                 {% render("ApplicationSonataUserBundle:Security:loginBase") %}
+                 {% render controller("ApplicationSonataUserBundle:Security:loginBase") %}
             {% endif %}
             </div>
         {% endblock %}

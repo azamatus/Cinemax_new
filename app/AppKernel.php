@@ -63,18 +63,19 @@ class AppKernel extends Kernel
             new Sonata\BlockBundle\SonataBlockBundle(),
             new Sonata\SeoBundle\SonataSeoBundle(),
             new Sonata\NotificationBundle\SonataNotificationBundle(),
-
-            // CMF Integration
-            new Symfony\Cmf\Bundle\RoutingExtraBundle\SymfonyCmfRoutingExtraBundle(),
+            new Sonata\CoreBundle\SonataCoreBundle(),
+            new Sonata\ClassificationBundle\SonataClassificationBundle(),
 
 
             // Enable this if you want to audit backend action
-            new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),
+//            new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),
             new Cinemax\CinemaxBundle\CinemaxBundle(),
             new Cinemax\MenuBundle\CinemaxMenuBundle(),
             new Cinemax\HeaderSliderBundle\CinemaxHeaderSliderBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
-            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle()
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+            new Gregwar\CaptchaBundle\GregwarCaptchaBundle(),
+            new Cinemax\FeedbackBundle\CinemaxFeedbackBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

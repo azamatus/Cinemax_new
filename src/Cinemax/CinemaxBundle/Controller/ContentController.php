@@ -27,7 +27,6 @@ class ContentController  extends Controller{
 
     public function getSliderAction()
     {
-
         $discs = $this -> getDoctrine()
             ->getRepository("CinemaxBundle:Discs")
             ->findAll();

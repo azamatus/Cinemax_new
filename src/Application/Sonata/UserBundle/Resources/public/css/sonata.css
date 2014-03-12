@@ -223,6 +223,7 @@ a:hover .user_registration_hover {
     margin-bottom: 10px;
     padding-left: 10px;
     width: 260px;
+    font-size: 16px;
 }
 #right_side span {
     display: block;

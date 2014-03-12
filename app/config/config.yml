@@ -4,6 +4,7 @@ imports:
     - { resource: fos_user.yml }
     - { resource: @CinemaxHeaderSliderBundle/Resources/config/admin.xml }
     - { resource: @CinemaxBundle/Resources/config/admin.xml }
+    - { resource: @CinemaxFeedbackBundle/Resources/config/admin.xml }
 
     # Sonata Bundles
     - { resource: sonata/sonata_admin.yml }
@@ -113,3 +114,9 @@ knp_paginator:
       template:
           pagination: KnpPaginatorBundle:Pagination:sliding.html.twig     # sliding pagination controls template
           sortable: KnpPaginatorBundle:Pagination:sortable_link.html.twig # sort link template
+
+gregwar_captcha:
+    width: 150
+    height: 25
+    quality: 60
+    distortion: false
